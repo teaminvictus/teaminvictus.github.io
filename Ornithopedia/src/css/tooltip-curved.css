@@ -1,0 +1,267 @@
+
+@font-face {
+	font-family: 'Gochi Hand';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Gochi Hand'), local('GochiHand-Regular'), url(https://fonts.gstatic.com/s/gochihand/v7/ZZzTGmufF-Wq8IS3fkpBuwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.tooltip {
+	position: absolute;
+	z-index: 999;
+	width: 2.76em;
+	height: 2.2em;
+	cursor: pointer;
+	opacity: 1;
+}
+
+/* Trigger item */
+
+.tooltip-item {
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	top: 50%;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid #e29948;
+	-webkit-animation: pulse 0.6s infinite alternate;
+	animation: pulse 0.6s infinite alternate;
+}
+
+
+
+@-webkit-keyframes pulse {
+	from { -webkit-transform: scale3d(0.5,0.5,1); }
+	to { -webkit-transform: scale3d(1,1,1); }
+}
+
+@keyframes pulse {
+	from { -webkit-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); }
+	to { -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+}
+
+.tooltip:hover .tooltip-item {
+	border-color: #fff;
+}
+
+.tooltip:first-child {
+	top: 45%;
+	left: 65%;
+}
+
+.tooltip:nth-child(2) {
+	top: 65%;
+	left: 70%;
+}
+
+.tooltip:nth-child(3) {
+	top: 76%;
+	left: 69%;
+}
+
+.tooltip:nth-child(4) {
+	top: 80%;
+	left: 63%;
+}
+
+.tooltip:nth-child(5) {
+	top: 93%;
+	left: 65%;
+}
+
+.tooltip:nth-child(6) {
+	top: 60%;
+	left: 53%;
+}
+
+.tooltip:nth-child(7) {
+	top: 35%;
+	left: 50%;
+}
+
+.tooltip:nth-child(8) {
+	top: 50%;
+	left: 35%;
+}
+/* Tooltip */
+
+.tooltip-content {
+	position: absolute;
+	background: #e29948;
+	z-index: 999;
+	width: 200px;
+	bottom: 50%;
+	margin-bottom: -1em;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 1.1em;
+	text-align: center;
+	color: #fff;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+	font-family: 'Gochi Hand', cursive;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+/* 80% */
+@media(max-width:1024px){
+	.tooltip{
+		width : 1.76em;
+		height: 1.76em;
+	}
+	.tooltip-item {
+		width: 24px;
+		height: 24px;
+	}
+
+	.tooltip-content{
+		width: 160px;
+		padding: 16px;
+		border-radius: 16px;
+		font-size: 0.88em;
+	}
+}
+
+/* 60% */
+@media(max-width:768px) {
+	.tooltip{
+		width : 1.32em;
+		height: 1.32em;
+	}
+	.tooltip-item {
+		width: 18px;
+		height: 18px;
+	}
+	.tooltip-content{
+		width: 120px;
+		padding: 12px;
+		border-radius: 12px;
+		font-size: 0.66em;
+	}
+}
+
+/* 32% */
+@media(max-width:414px) {
+	.tooltip{
+		width : 0.7em;
+		height: 0.7em;
+	}
+	.tooltip-item {
+		width: 9.6px;
+		height: 9.6px;
+	}
+	.tooltip-content{
+		width: 64px;
+		padding: 6.4px;
+		border-radius: 6.4px;
+		font-size: 0.5em;
+	}
+
+	.tooltip:first-child {
+		top: 47%;
+		left: 70%;
+	}
+
+	.tooltip:nth-child(2) {
+		top: 67%;
+		left: 75%;
+	}
+
+	.tooltip:nth-child(3) {
+		top: 79%;
+		left: 73%;
+	}
+
+	.tooltip:nth-child(4) {
+		top: 83%;
+		left: 68%;
+	}
+
+	.tooltip:nth-child(5) {
+		top: 96%;
+		left: 68%;
+	}
+
+	.tooltip:nth-child(6) {
+		top: 65%;
+		left: 55%;
+	}
+
+	.tooltip:nth-child(7) {
+		top: 40%;
+		left: 55%;
+	}
+
+	.tooltip:nth-child(8) {
+		top: 55%;
+		left: 40%;
+	}
+}
+
+.tooltip-west .tooltip-content {
+	left: 4em;
+	-webkit-transform-origin: -2em 50%;
+	transform-origin: -2em 50%;
+	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
+	transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
+}
+
+.tooltip-east .tooltip-content {
+	right: 4em;
+	-webkit-transform-origin: calc(100% + 2em) 50%;
+	transform-origin: calc(100% + 2em) 50%;
+	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
+	transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
+}
+
+.tooltip:hover .tooltip-content {
+	opacity: 1;
+	-webkit-transform: translate3d(0,50%,0) rotate3d(0,0,0,0);
+	transform: translate3d(0,50%,0) rotate3d(0,0,0,0);
+	pointer-events: auto;
+}
+
+/* Gap "bridge" and arrow */
+
+.tooltip-content::before,
+.tooltip-content::after {
+	content: '';
+	position: absolute;
+}
+
+.tooltip-content::before {
+	height: 100%;
+	width: 3em;
+}
+
+.tooltip-content::after {
+	width: 2em;
+	height: 2em;
+	top: 50%;
+	margin: -1em 0 0;
+	background: url("../images/tooltip2.svg") no-repeat center center;
+	background-size: 100%;
+}
+
+.tooltip-west .tooltip-content::before,
+.tooltip-west .tooltip-content::after {
+	right: 99%; /* because of FF, otherwise we have a gap */
+}
+
+.tooltip-east .tooltip-content::before,
+.tooltip-east .tooltip-content::after {
+	left: 99%; /* because of FF, otherwise we have a gap */
+}
+
+.tooltip-east .tooltip-content::after {
+	-webkit-transform: scale3d(-1,1,1);
+	transform: scale3d(-1,1,1);
+}
+
+
