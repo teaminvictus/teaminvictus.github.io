@@ -5,27 +5,34 @@ import React from 'react';
 import Navigation from '../components/navigation';
 import Header from '../components/header';
 import Map from '../components/map';
-
+import MapOfBirds from '../components/mapOfBirds';
+import BirdFinder from '../components/birdFinder';
+import BirdIdentifier from  '../components/birdIdentifier';
 
 require("jquery");
 require("bootstrap-webpack");
+require("font-awesome-webpack");
 require("../../css/navigation.css");
 require("../../css/header.css");
 require("../../css/map.css");
+require("../../css/normalize.css");
 require("../../css/tooltip-curved.css");
 require("../js/navigation");
+require("../js/loadingpage");
+
 
 const App = () => (
 
     <div>
+
         <Navigation/>
         <div id="landingPage" >
             <Header/>
             <Map/>
         </div>
-        {/*<section id="findBirds">*/}
-            {/*Find Birds*/}
-        {/*</section>*/}
+        <MapOfBirds/>
+        <BirdFinder/>
+        <BirdIdentifier/>
     </div>
 );
 

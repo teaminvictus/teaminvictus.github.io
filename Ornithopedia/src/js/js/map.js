@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
     var projection = d3.geo.conicConformal()
         .rotate([-132, 0])
-        .center([0, -27])
+        .center([2, -27])
         .parallels([-18, -36])
         .scale(Math.min(height * 2.2, width * 1.1))
         .translate([width / 2, height / 2])

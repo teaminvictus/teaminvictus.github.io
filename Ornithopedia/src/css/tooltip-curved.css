@@ -49,42 +49,42 @@
 
 .tooltip:first-child {
 	top: 45%;
-	left: 65%;
+	left: 67%;
 }
 
 .tooltip:nth-child(2) {
 	top: 65%;
-	left: 70%;
+	left: 68%;
 }
 
 .tooltip:nth-child(3) {
-	top: 76%;
-	left: 69%;
+	top: 75%;
+	left: 66%;
 }
 
 .tooltip:nth-child(4) {
-	top: 80%;
-	left: 63%;
+	top: 79%;
+	left: 61%;
 }
 
 .tooltip:nth-child(5) {
-	top: 93%;
-	left: 65%;
+	top: 92%;
+	left: 62%;
 }
 
 .tooltip:nth-child(6) {
 	top: 60%;
-	left: 53%;
+	left: 52%;
 }
 
 .tooltip:nth-child(7) {
 	top: 35%;
-	left: 50%;
+	left: 52%;
 }
 
 .tooltip:nth-child(8) {
 	top: 50%;
-	left: 35%;
+	left: 32%;
 }
 /* Tooltip */
 
@@ -165,42 +165,42 @@
 
 	.tooltip:first-child {
 		top: 47%;
-		left: 70%;
+		left: 65%;
 	}
 
 	.tooltip:nth-child(2) {
 		top: 67%;
-		left: 75%;
+		left: 70%;
 	}
 
 	.tooltip:nth-child(3) {
 		top: 79%;
-		left: 73%;
+		left: 68%;
 	}
 
 	.tooltip:nth-child(4) {
 		top: 83%;
-		left: 68%;
+		left: 63%;
 	}
 
 	.tooltip:nth-child(5) {
 		top: 96%;
-		left: 68%;
+		left: 63%;
 	}
 
 	.tooltip:nth-child(6) {
 		top: 65%;
-		left: 55%;
+		left: 50%;
 	}
 
 	.tooltip:nth-child(7) {
 		top: 40%;
-		left: 55%;
+		left: 50%;
 	}
 
 	.tooltip:nth-child(8) {
 		top: 55%;
-		left: 40%;
+		left: 45%;
 	}
 }
 

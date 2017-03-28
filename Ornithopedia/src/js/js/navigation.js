@@ -16,26 +16,37 @@ $(document).ready(function() {
 
     const navigate = function (e) {
         switch (e.target.id){
-            case "findBirdsLink":
+            case "mapOfBirdsLink":
                 $('#landingPage').hide();
-                $('#findBirds').show();
+                $('#mapOfBirds').show();
+                $('#birdFinder').hide();
+                $('#birdIdentifier').hide();
                 break;
-            case "identifyBirdsLink":
+            case "birdFinderLink":
+                $('#landingPage').hide();
+                $('#mapOfBirds').hide();
+                $('#birdFinder').show();
+                $('#birdIdentifier').hide();
                 break;
-            case "projectsLink":
+            case "birdIdentifierLink":
+                $('#landingPage').hide();
+                $('#mapOfBirds').hide();
+                $('#birdFinder').hide();
+                $('#birdIdentifier').show();
                 break;
             case "contactLink":
                 break;
             default:
                 $('#landingPage').show();
-                $('#findBirds').hide();
+                $('#mapOfBirds').hide();
+                $('#birdFinder').hide();
+                $('#birdIdentifier').hide();
         };
     };
 
     $("#homeLink").click(navigate);
-    $("#findBirdsLink").click(navigate);
-    $("#identifyBirdsLink").click(navigate);
-    $("#projectsLink").click(navigate);
-    $("#contactLink").click(navigate);
+    $("#mapOfBirdsLink").click(navigate);
+    $("#birdFinderLink").click(navigate);
+    $("#birdIdentifierLink").click(navigate);
 })
 

@@ -8,8 +8,7 @@
 import React from 'react';
 
 const Map = () => (
-    <section id="section_map">
-
+    <section id="section_map" className="demo">
         <div className="container" id="map">
             <div className="tooltip tooltip-west">
                 <span className="tooltip-item"></span>
@@ -44,7 +43,6 @@ const Map = () => (
                 <span className="tooltip-content">Western Australia</span>
             </div>
         </div>
-
     </section>
 );
 

@@ -9,32 +9,34 @@
 #map {
     padding-top: 5%;
     margin: 5%;
-    position: relative;
+    position: absolute;
 }
 
+
 #section_map{
-    position: relative;
+    position: absolute;
     text-align: center;
     background: lightgray;
     color: white;
+    top:100%;
     width:100%;
-    height: 800px;
+    height: 100%;
 }
 
 @media(max-width:1024px){
     #section_map{
-        height: 640px;
+        /*height: 640px;*/
     }
 }
 
 @media(max-width:768px) {
     #section_map{
-        height: 480px;
+        /*height: 480px;*/
     }
 }
 
 @media(max-width:414px) {
     #section_map{
-        height: 280px;
+        /*height: 280px;*/
     }
 }

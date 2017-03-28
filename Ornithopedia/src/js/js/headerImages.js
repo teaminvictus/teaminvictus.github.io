@@ -193,13 +193,4 @@ $( document ).ready(function() {
         location.reload();
     });
 
-    // images = $('document').querySelectorAll('.boxshadow');
-    // images.each(image => image.on('mouseover',function () {
-    //         image.css('z-index',1111);
-    // }));
-    // images.each(image => image.on('mouseout',function () {
-    //
-    // }));
-
-
 });
