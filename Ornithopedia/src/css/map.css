@@ -37,6 +37,6 @@
 
 @media(max-width:414px) {
     #section_map{
-        /*height: 280px;*/
+        height: 280px;
     }
 }

@@ -9,6 +9,9 @@ import React from 'react';
 
 const Map = () => (
     <section id="section_map" className="demo">
+        {/*<div className="container">*/}
+            {/*<h3> Did you know? </h3>*/}
+        {/*</div>*/}
         <div className="container" id="map">
             <div className="tooltip tooltip-west">
                 <span className="tooltip-item"></span>

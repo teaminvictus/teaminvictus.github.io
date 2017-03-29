@@ -3,18 +3,19 @@
  */
 import React from 'react';
 
-require("../../css/birdFinder.css");
+require("../js/findBirds");
+var image = require("../../images/Birds/1.jpg");
 
 const BirdFinder = () => (
-    <section id="birdFinder">
+    <section id="birdFinder" className="hideElement">
+        <div className="container">
+            <form className="search-form">
+                <input type="text" className="search" placeholder="Search Bird..." />
+            </form>
+        </div>
+
         <center>
-            <div className="container">
-                <div className="box">
-                    <div className="container-1">
-                        <span className="icon"><i className="fa fa-search"></i></span>
-                        <input type="search" id="searchBird" placeholder="Search Bird..." />
-                    </div>
-                </div>
+            <div id="birdImages">
             </div>
         </center>
     </section>

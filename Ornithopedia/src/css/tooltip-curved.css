@@ -9,7 +9,7 @@
 
 .tooltip {
 	position: absolute;
-	z-index: 999;
+	z-index: 1;
 	width: 2.76em;
 	height: 2.2em;
 	cursor: pointer;
@@ -91,7 +91,7 @@
 .tooltip-content {
 	position: absolute;
 	background: #e29948;
-	z-index: 999;
+	z-index: 1;
 	width: 200px;
 	bottom: 50%;
 	margin-bottom: -1em;
@@ -208,16 +208,16 @@
 	left: 4em;
 	-webkit-transform-origin: -2em 50%;
 	transform-origin: -2em 50%;
-	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
-	transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
+	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,20deg);
+	transform: translate3d(0,50%,0) rotate3d(1,1,1,20deg);
 }
 
 .tooltip-east .tooltip-content {
 	right: 4em;
 	-webkit-transform-origin: calc(100% + 2em) 50%;
 	transform-origin: calc(100% + 2em) 50%;
-	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
-	transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
+	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,-20deg);
+	transform: translate3d(0,50%,0) rotate3d(1,1,1,-20deg);
 }
 
 .tooltip:hover .tooltip-content {

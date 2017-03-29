@@ -5,7 +5,7 @@ import React from 'react';
 
 
 const MapOfBirds = () => (
-    <section id="mapOfBirds">
+    <section id="mapOfBirds" className="hideElement">
         Find Birds
     </section>
 );

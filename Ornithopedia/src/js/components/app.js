@@ -18,13 +18,13 @@ require("../../css/map.css");
 require("../../css/normalize.css");
 require("../../css/tooltip-curved.css");
 require("../js/navigation");
-require("../js/loadingpage");
+require("../js/landingpage");
+require("../../css/birdFinder.css");
 
 
 const App = () => (
 
     <div>
-
         <Navigation/>
         <div id="landingPage" >
             <Header/>
