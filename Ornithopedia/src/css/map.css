@@ -7,8 +7,8 @@
 }
 
 #map {
-    padding-top: 5%;
-    margin: 5%;
+    /*padding-top: 5%;*/
+    /*margin: 5%;*/
     position: absolute;
 }
 
@@ -31,7 +31,7 @@
 
 @media(max-width:768px) {
     #section_map{
-        /*height: 480px;*/
+        height: 480px;
     }
 }
 

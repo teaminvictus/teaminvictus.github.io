@@ -48,50 +48,50 @@
 }
 
 .tooltip:first-child {
-	top: 45%;
+	top: 40%;
 	left: 67%;
 }
 
 .tooltip:nth-child(2) {
-	top: 65%;
-	left: 68%;
+	top: 60%;
+	left: 75%;
 }
 
 .tooltip:nth-child(3) {
-	top: 75%;
-	left: 66%;
+	top: 73%;
+	left: 71%;
 }
 
 .tooltip:nth-child(4) {
-	top: 79%;
-	left: 61%;
+	top: 77%;
+	left: 65%;
 }
 
 .tooltip:nth-child(5) {
 	top: 92%;
-	left: 62%;
+	left: 66%;
 }
 
 .tooltip:nth-child(6) {
-	top: 60%;
-	left: 52%;
+	top: 58%;
+	left: 50%;
 }
 
 .tooltip:nth-child(7) {
-	top: 35%;
-	left: 52%;
+	top: 32%;
+	left: 48%;
 }
 
 .tooltip:nth-child(8) {
-	top: 50%;
-	left: 32%;
+	top: 44%;
+	left: 30%;
 }
 /* Tooltip */
 
 .tooltip-content {
 	position: absolute;
-	background: #e29948;
-	z-index: 1;
+	background: white;
+	z-index: 2;
 	width: 200px;
 	bottom: 50%;
 	margin-bottom: -1em;
@@ -99,11 +99,11 @@
 	border-radius: 20px;
 	font-size: 1.1em;
 	text-align: center;
-	color: #fff;
+	color: grey;
 	opacity: 0;
 	cursor: default;
 	pointer-events: none;
-	font-family: 'Gochi Hand', cursive;
+	font-family: "Comic Sans MS", cursive;
 	-webkit-font-smoothing: antialiased;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 	transition: opacity 0.3s, transform 0.3s;

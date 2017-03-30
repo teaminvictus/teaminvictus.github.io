@@ -7,7 +7,7 @@ $( document ).ready(function() {
     var jsonData = null;
 
     const endpoint = 'https://api.gbif.org/v1/occurrence/search?datasetkey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&' +
-        'country=au&victoria&q=melbourne&limit=5';
+        'country=au&limit=20';
     // const endpoint = "https://api.gbif.org/v1/species/search?rank=species&q=Aves"
     // const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&facets=imageAvailable";
 

@@ -8,8 +8,8 @@ $( document ).ready(function() {
     var d3 = require('d3');
     var topojson = require("topojson");
 
-    var width = $(window).width() * 0.7,
-        height = ($(window).width() * 0.7) * 0.66;
+    var width = $(window).width() * 0.6,
+        height = ($(window).width() * 0.6) * 0.66;
 
     var projection = d3.geo.conicConformal()
         .rotate([-132, 0])
