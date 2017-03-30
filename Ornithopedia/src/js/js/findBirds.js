@@ -15,7 +15,7 @@ $( document ).ready(function() {
     }).done(function(data){
         var jsonData = data.results;
         $.each( data.results, function( i, item ) {
-            const url = 'http://api.gbif.org/v1/species/' + item.speciesKey +'/media';
+            const url = 'https://api.gbif.org/v1/species/' + item.speciesKey +'/media';
             $.getJSON(url, function(media){
             }).done(function(media){
                 // $.each( media.results, function( i, item ) {
