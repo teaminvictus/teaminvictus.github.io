@@ -32,42 +32,42 @@ const Map = () => (
                         <span className="tooltip-item"></span>
                         <div className="tooltip-content">
                             <img src={qld} width="150" height="150"/>
-                            <span>Regent Honeyeater is one of the endangered bird in the Queensland..!!</span>
+                            <span>The Regent Honeyeater is one of the endangered bird in the Queensland!!</span>
                         </div>
                     </div>
                     <div className="tooltip tooltip-west">
                         <span className="tooltip-item"></span>
                         <div className="tooltip-content">
                             <img src={nsw} width="150" height="150"/>
-                            <span>Hooded Plover is critically endangered bird in the New South Wales..!!</span>
+                            <span>The Hooded Plover is critically endangered bird in the New South Wales!!</span>
                         </div>
                     </div>
                     <div className="tooltip tooltip-west">
                         <span className="tooltip-item"></span>
                         <div className="tooltip-content">
                             <img src={act} width="150" height="150"/>
-                            <span>Australasian Bitterns is the most endangered bird in the Australian Capital Territory..!!</span>
+                            <span>The Australasian Bitterns is the most endangered bird in the Australian Capital Territory..!!</span>
                         </div>
                     </div>
                     <div className="tooltip tooltip-east">
                         <span className="tooltip-item"></span>
                         <div className="tooltip-content">
                             <img src={vic} width="150" height="150"/>
-                            <span>Australian Painted Snipe is endangered bird in the Victoria..!!</span>
+                            <span>The Australian Painted Snipe is endangered bird in the Victoria..!!</span>
                         </div>
                     </div>
                     <div className="tooltip tooltip-west">
                         <span className="tooltip-item"></span>
                         <div className="tooltip-content">
                             <img src={tas} width="150" height="150"/>
-                            <span>Swift Parrot is one of the endangered bird in the Tasmania..!!</span>
+                            <span>The Swift Parrot is one of the endangered bird in the Tasmania..!!</span>
                         </div>
                     </div>
                     <div className="tooltip tooltip-east">
                         <span className="tooltip-item"></span>
                         <div className="tooltip-content">
                             <img src={sa} width="150" height="150"/>
-                            <span>Orange-bellied Parrot is the most endangered bird in the South Australia..!!</span>
+                            <span>The Orange-bellied Parrot is the most endangered bird in the South Australia..!!</span>
                         </div>
                     </div>
                     <div className="tooltip tooltip-east">

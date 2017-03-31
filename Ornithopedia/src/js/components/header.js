@@ -11,7 +11,7 @@ const Header = () => (
           <div className="container">
               <div className="intro-text">
                   <span className="name">Ornithopedia</span>
-                  <span>Know About Surrounding Birds</span>
+                  <span>Get Involve Birds</span>
                   <div id="images" />
               </div>
               <div className="row">
@@ -19,16 +19,16 @@ const Header = () => (
                       <p>
                           Are you a bird Lover?
                           <br />
-                          Do you want to know what kind of birds surrounding you?
+                          Do you want to know what kind of birds near by?
                           <br/>
-                          Know about them and help them in increasing their biodiversity.
+                          Find out about them and help them to increase their biodiversity.
                           <br/>
                           {/*<h5>Click below button to know more..!!</h5>*/}
                       </p>
                   </div>
               </div>
           </div>
-          <a href="#section_map"><span></span>Scroll</a>
+          <a href="#section_map"><span></span>More</a>
       </section>
 );
 

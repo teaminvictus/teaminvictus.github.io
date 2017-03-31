@@ -14,7 +14,7 @@ const Navigation = () => (
                 <ul className="sub-menu">
                     /* Home, Map of Bird, Bird Finder, Bird Identifier*/
                     <li> <a id="homeLink" href="#">Home</a> </li>
-                    <li> <a id="mapOfBirdsLink" href="#mapOfBirds">Map Of Birds</a> </li>
+                    <li> <a id="mapOfBirdsLink" href="#mapOfBirds">Map</a> </li>
                     <li> <a id="birdFinderLink" href="#birdFinder">Bird Finder</a> </li>
                     <li> <a id="birdIdentifierLink" href="#birdIdentifier">Bird Identifier</a> </li>
                     {/*<li> <a id="projectsLink" href="#projects">Projects</a> </li>*/}
