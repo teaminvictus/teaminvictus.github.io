@@ -9,7 +9,7 @@ $( document ).ready(function() {
     // const endpoint = 'https://api.gbif.org/v1/occurrence/search?datasetkey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&' +
     //     'country=au&limit=20';
     // const endpoint = "https://api.gbif.org/v1/species/search?rank=species&q=Aves"
-    const endpoint = "http://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=2571";
+    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=2571";
 
     jsonData = $.getJSON(endpoint, function(data) {
     }).done(function(data){
