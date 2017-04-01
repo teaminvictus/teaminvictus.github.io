@@ -95,7 +95,7 @@ a {
 .card{
     position: relative;
     background-color: white;
-    height: 250px;
+    height: 260px;
     width: 300px;
     padding: 10px;
     margin: 10px;
@@ -130,7 +130,6 @@ a {
 
 
 #birdImages .image-item {
-    margin: 0 0 15px;
     right: 0;
 }
 #birdImages .image-item .image-link {
@@ -143,7 +142,7 @@ a {
     box-shadow: 5px 5px 5px #888888;
 }
 #birdImages .image-item .image-link .caption {
-    background: rgba(211, 211, 211, 0.9);
+    background: rgba(91, 153, 61, 0.54);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -175,3 +174,5 @@ a {
 #birdImages * {
     z-index: 2;
 }
+
+

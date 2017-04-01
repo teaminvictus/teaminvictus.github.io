@@ -1,0 +1,90 @@
+.image-modal {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    color: grey;
+}
+
+.image-modal .modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+    padding: 100px 0;
+    text-align: center;
+}
+.image-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+.image-modal .modal-content img {
+    margin-bottom: 30px;
+}
+.image-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+.image-modal .modal-content .img-shadow {
+    box-shadow: 5px 5px 5px #888888;
+}
+.image-modal .close-modal {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+.image-modal .close-modal:hover {
+    opacity: 0.3;
+}
+.image-modal .close-modal .lr {
+    height: 75px;
+    width: 1px;
+    margin-left: 35px;
+    background-color: grey;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Safari and Chrome */
+    z-index: 1051;
+}
+.image-modal .close-modal .lr .rl {
+    height: 75px;
+    width: 1px;
+    background-color: grey;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari and Chrome */
+    z-index: 1052;
+}
+.image-modal .modal-backdrop {
+    opacity: 0;
+    display: none;
+}
+
+.birdDescription p{
+    padding: 20px;
+    text-align: left;
+}
+
+.birdMap{
+    width: 400px;
+    height: 300px;
+}
+
+.trendLegend{
+    bottom: 10%;
+}

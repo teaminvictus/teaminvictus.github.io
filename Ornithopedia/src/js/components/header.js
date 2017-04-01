@@ -11,24 +11,24 @@ const Header = () => (
           <div className="container">
               <div className="intro-text">
                   <span className="name">Ornithopedia</span>
-                  <span>Get Involve Birds</span>
+                  <span>Get Involved With Birds</span>
                   <div id="images" />
               </div>
               <div className="row">
                   <div className="col-lg-12">
                       <p>
-                          Are you a bird Lover?
+                          Discover Australia’s bird life and important places for birds and nature
                           <br />
-                          Do you want to know what kind of birds near by?
+                          Find out what kind of bird near by?
                           <br/>
-                          Find out about them and help them to increase their biodiversity.
+                          and what you can do to save them.
                           <br/>
                           {/*<h5>Click below button to know more..!!</h5>*/}
                       </p>
                   </div>
               </div>
           </div>
-          <a href="#section_map"><span></span>More</a>
+          <a href="#section_map"><span></span>Know More</a>
       </section>
 );
 

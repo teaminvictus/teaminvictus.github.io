@@ -11,7 +11,7 @@ $( document ).ready(function() {
     var width = $(window).width() * 0.6,
         height = ($(window).width() * 0.6) * 0.66;
 
-    var projection = d3.geo.conicConformal()
+    var projection = d3.geoConicConformal()
         .rotate([-132, 0])
         .center([2, -27])
         .parallels([-18, -36])
@@ -19,7 +19,7 @@ $( document ).ready(function() {
         .translate([width / 2, height / 2])
         .precision(0.1);
 
-    var path = d3.geo.path()
+    var path = d3.geoPath()
         .projection(projection);
 
     var svg = d3.select("#map").append("svg")

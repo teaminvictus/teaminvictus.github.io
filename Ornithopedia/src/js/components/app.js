@@ -8,6 +8,8 @@ import Map from '../components/map';
 import MapOfBirds from '../components/mapOfBirds';
 import BirdFinder from '../components/birdFinder';
 import BirdIdentifier from  '../components/birdIdentifier';
+import BirdDetails from "../components/birdDetails";
+
 
 require("jquery");
 require("bootstrap-webpack");
@@ -20,6 +22,8 @@ require("../../css/tooltip-curved.css");
 require("../js/navigation");
 require("../js/landingpage");
 require("../../css/birdFinder.css");
+require("../../css/birdDetail.css");
+
 
 
 const App = () => (
@@ -33,6 +37,7 @@ const App = () => (
         <MapOfBirds/>
         <BirdFinder/>
         <BirdIdentifier/>
+        <div id="birdDetails" />
     </div>
 );
 
