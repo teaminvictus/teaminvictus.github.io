@@ -12,7 +12,7 @@ $( document ).ready(function() {
     var d3 = require('d3');
     let jsonData = null;
     let birdDetailData = null;
-    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=2571";
+    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=100";
 
     jsonData = $.getJSON(endpoint, function(data) {
     }).done(function(data){
@@ -24,22 +24,22 @@ $( document ).ready(function() {
 
                 var sounds = [];
                 // url = "http://www.xeno-canto.org/api/2/recordings?query=cnt:%22Australia " + item.commonName.split(",")[0];
-                url = "http://www.xeno-canto.org/api/2/recordings?query=cnt:%22Australia%22%20Olive-backed%20Oriole";
-
-                $.ajax({
-                    url: url,
-                    dataType: 'json',
-                    success: function(data) {
-                        //stuff
-                        console.log(data);
-                        sounds.push({
-                            "file" : data.file
-                        });
-                    },
-                    beforeSend: function(xhr){
-                        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-                    }
-                });
+                // url = "http://www.xeno-canto.org/api/2/recordings?query=cnt:%22Australia%22%20Olive-backed%20Oriole";
+                //
+                // $.ajax({
+                //     url: url,
+                //     dataType: 'json',
+                //     success: function(data) {
+                //         //stuff
+                //         console.log(data);
+                //         sounds.push({
+                //             "file" : data.file
+                //         });
+                //     },
+                //     beforeSend: function(xhr){
+                //         xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                //     }
+                // });
 
                 $("<div>")
                     .attr("class", "card image-item")
