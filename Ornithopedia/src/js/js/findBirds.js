@@ -12,7 +12,7 @@ $( document ).ready(function() {
     var d3 = require('d3');
     let jsonData = null;
     let birdDetailData = null;
-    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=100";
+    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=20";
 
     jsonData = $.getJSON(endpoint, function(data) {
     }).done(function(data){
