@@ -190,7 +190,7 @@ $( document ).ready(function() {
                             $("#birdTrend" + item.id)
                                 .append(
                                     $("<div>")
-                                        .text("Bird Count trend of " + item.commonName.split(",")[0] + " (Last 10 years)")
+                                        .text("Bird Count trend of " + item.commonName.split(",")[0] + " (Last 5 years)")
                                 );
 
                             var parseTime = d3.timeParse("%d-%b-%y");
@@ -210,7 +210,7 @@ $( document ).ready(function() {
                                 });
 
                             const currentYear = new Date().getFullYear();
-                            var year = currentYear - 12;
+                            var year = currentYear - 7;
                             var trendData = [];
                             while (year <= currentYear - 2) {
                                 url = "https://api.gbif.org/v1/occurrence/search?datasetkey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&country=au&limit=0&speciesKey=" + data.speciesKey + "&year=" + year;
