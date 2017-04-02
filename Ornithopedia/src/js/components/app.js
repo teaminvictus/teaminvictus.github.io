@@ -32,9 +32,9 @@ const App = () => (
             <Header/>
             <Map/>
         </div>
-        <MapOfBirds/>
+        {/*<MapOfBirds/>*/}
         <BirdFinder/>
-        <BirdIdentifier/>
+        {/*<BirdIdentifier/>*/}
         <div id="birdDetails" />
     </div>
 );

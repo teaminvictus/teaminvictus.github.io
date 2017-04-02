@@ -25,24 +25,40 @@ const Map = () => (
             </div>
             <div className="row">
                 <div className="col-lg-12">
+                    <div className="col-lg-5 col-lg-offset-1">
+                        <p className="description">
+                            Australia's natural environment has experienced a large-scale change in the past century.
+                            Coastal areas rich with native animals and plants have been significantly impacted by the urbanization which continues to expand.
+                            This change resulted into vastly different ecology within an environment that is no longer able to support many native animals and plants.
+                            The Regent Honeyeater, the Hooded Plover, the Australasian Bitterns, the Australian Painted Snipe, the Swift Parrot, the Orange-bellied Parrot are small samples of the Australian birds threatened with extinction.
+                            Habitat destruction and fragmentation, animal and plant invasion have all combined to threatened these species and more.
+                            If Aussie bird becomes extinct, we not only lose their wonderful natural beauty but also lose the balance of the ecosystem.
+                            Animals and plants depend on these birds will become threaten.
+                        </p>
+                        <p className="description">
+                            The good news is that you can help restore some of the balance in your local area.
+                            By creating a bird-friendly environment in your backyard and neighborhood, you can share your space with these birds.
+                            Take action and help prevent this birds and many other species from ending up in endangered list.
+                        </p>
+                    </div>
                     <div className="col-lg-6">
                         <br />
                         <div className="" id="map">
-                            <div className="tooltip tooltip-west">
+                            <div className="tooltip tooltip-east">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={qld} width="150" height="150"/>
                                     <span>The Regent Honeyeater is one of the endangered bird in the Queensland!!</span>
                                 </div>
                             </div>
-                            <div className="tooltip tooltip-west">
+                            <div className="tooltip tooltip-east">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={nsw} width="150" height="150"/>
                                     <span>The Hooded Plover is critically endangered bird in the New South Wales!!</span>
                                 </div>
                             </div>
-                            <div className="tooltip tooltip-west">
+                            <div className="tooltip tooltip-east">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={act} width="150" height="150"/>
@@ -56,28 +72,28 @@ const Map = () => (
                                     <span>The Australian Painted Snipe is endangered bird in the Victoria..!!</span>
                                 </div>
                             </div>
-                            <div className="tooltip tooltip-west">
+                            <div className="tooltip tooltip-east">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={tas} width="150" height="150"/>
                                     <span>The Swift Parrot is one of the endangered bird in the Tasmania..!!</span>
                                 </div>
                             </div>
-                            <div className="tooltip tooltip-east">
+                            <div className="tooltip tooltip-west">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={sa} width="150" height="150"/>
                                     <span>The Orange-bellied Parrot is the most endangered bird in the South Australia..!!</span>
                                 </div>
                             </div>
-                            <div className="tooltip tooltip-east">
+                            <div className="tooltip tooltip-west">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={nt} width="150" height="150"/>
                                     <span>Grey Currawong is critically endangered bird in the Norther Territory..!!</span>
                                 </div>
                             </div>
-                            <div className="tooltip tooltip-east">
+                            <div className="tooltip tooltip-west">
                                 <span className="tooltip-item"></span>
                                 <div className="tooltip-content">
                                     <img src={wa} width="150" height="150"/>
@@ -86,24 +102,7 @@ const Map = () => (
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-5 col-lg-offset-1">
-                        <br />
-                        <br />
-                        <p className="description">
-                            Australia's natural environment has experienced a large-scale change in the past century.
-                            Coastal areas rich with native animals and plants have been significantly impacted by the urbanization which continues to expand.
-                            This change resulted into vastly different ecology within an environment that is no longer able to support many native animals and plants.
-                            The Regent Honeyeater, the Hooded Plover, the Australasian Bitterns, the Australian Painted Snipe, the Swift Parrot, the Orange-bellied Parrot are small samples of the Australian birds threatened with extinction.
-                            Habitat destruction and fragmentation, animal and plant invasion have all combined to threatened these species and more.
-                            If Aussie bird becomes extinct, we not only lose their wonderful natural beauty but also lose the balance of the ecosystem.
-                            Animals and plants depend on these birds will become threaten.
-                            <br />
-                            <br />
-                            The good news is that you can help restore some of the balance in your local area.
-                            By creating a bird-friendly environment in your backyard and neighborhood, you can share your space with these birds.
-                            Take action and help prevent this birds and many other species from ending up in endangered list.
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </div>

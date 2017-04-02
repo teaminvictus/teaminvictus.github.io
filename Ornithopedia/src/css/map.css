@@ -20,7 +20,7 @@ section .container .intro-text{
 }
 
 #section_map{
-    position: relative;
+    /*position: relative;*/
     text-align: center;
     background: lightgray;
     color: grey;
@@ -28,27 +28,52 @@ section .container .intro-text{
     height: 100%;
 }
 
+.description{
+    padding-top: 20px;
+    text-align: justify;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: medium;
+}
+
 @media(max-width:1024px){
     #section_map{
         /*height: 640px;*/
+    }
+    .description{
+        padding: 16px;
+        font-size: medium;
+    }
+    section .container .intro-text{
+        font-weight: 560;
+        font-size: 40px;
     }
 }
 
 @media(max-width:768px) {
     #section_map{
-        height: 480px;
+        /*height: 480px;*/
+    }
+    .description{
+        padding: 12px;
+        font-size: medium;
+    }
+    section .container .intro-text{
+        font-weight: 420;
+        font-size: 30px;
     }
 }
 
 @media(max-width:414px) {
     #section_map{
-        height: 280px;
+        /*height: 280px;*/
+    }
+    .description{
+        padding-top: 5px;
+        font-size: x-small;
+    }
+    section .container .intro-text{
+        font-weight: 300;
+        font-size: 20px;
     }
 }
 
-.description{
-    padding: 20px;
-    text-align: justify;
-    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-    font-size: medium;
-}

@@ -228,26 +228,7 @@ section .container {
 }
 
 
-@media(max-width:1024px){
-    #secHeader a span {
-        width : 36.8 px;
-        height: 36.8 px;
-    }
-}
 
-@media(max-width:768px) {
-    #secHeader a span {
-        width : 36.8 px;
-        height: 36.8 px;
-    }
-}
-
-@media(max-width:412px) {
-    #secHeader a span {
-        width : 15 px;
-        height: 15 px;
-    }
-}
 
 #secHeader a span::after {
     position: absolute;
@@ -278,6 +259,66 @@ section .container {
     -webkit-animation: sdb03 3s infinite;
     animation: sdb03 3s infinite;
     box-sizing: border-box;
+}
+
+@media(max-width:1024px){
+    /*#secHeader a span {*/
+        /*width : 36.8px;*/
+        /*height: 36.8px;*/
+    /*}*/
+}
+
+@media(max-width:768px) {
+    /*#secHeader a span {*/
+        /*width : 36.8px;*/
+        /*height: 36.8px;*/
+    /*}*/
+}
+
+@media(max-width:414px) {
+
+    .demo a {
+        left: 43%;
+        font: normal 400 10px/1 "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    }
+
+    #secHeader a span {
+        width : 30px;
+        height: 30px;
+        margin-left: -12px;
+    }
+    #secHeader a span::after {
+        width : 12px;
+        height: 12px;
+        margin: -10px 0 0 -5.5px;
+    }
+    #secHeader a span::before {
+        width : 28px;
+        height: 28px;
+    }
+}
+
+@media(max-width:320px) {
+
+    .demo a {
+        left: 43%;
+        font: normal 400 10px/1 "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    }
+
+    #secHeader a span {
+        width : 30px;
+        height: 30px;
+        margin-left: -12px;
+    }
+    #secHeader a span::after {
+        width : 12px;
+        height: 12px;
+        margin: -10px 0 0 -5.5px;
+    }
+    #secHeader a span::before {
+        width : 28px;
+        height: 28px;
+    }
 }
 
 @-webkit-keyframes sdb03 {

@@ -167,12 +167,12 @@ $( document ).ready(function() {
                                                                         .append(
                                                                             $("<div>")
                                                                                 .attr("id", "map" + item.id)
-                                                                                .attr("class", "col-lg-6 birdMap")
+                                                                                .attr("class", "col-sm-6 birdMap")
                                                                         )
                                                                         .append(
                                                                             $("<div>")
                                                                                 .attr("id", "birdTrend" + item.id)
-                                                                                .attr("class", "col-lg-6")
+                                                                                .attr("class", "col-sm-6")
                                                                         )
                                                                 )
                                                         )
@@ -181,7 +181,7 @@ $( document ).ready(function() {
                                 )
                                 .appendTo("#birdDetails");
 
-                            var svg = d3.select("#birdTrend" + item.id).append("svg").attr("width", "480").attr("height", "250"),
+                            var svg = d3.select("#birdTrend" + item.id).append("svg").attr("width", "300").attr("height", "150"),
                                 margin = {top: 20, right: 20, bottom: 30, left: 50},
                                 width = +svg.attr("width") - margin.left - margin.right,
                                 height = +svg.attr("height") - margin.top - margin.bottom,

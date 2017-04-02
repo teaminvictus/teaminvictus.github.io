@@ -82,11 +82,40 @@
     font-size: medium;
 }
 
-.birdMap{
-    width: 400px;
-    height: 300px;
-}
+
 
 .trendLegend{
     bottom: 10%;
+}
+
+.birdMap{
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+}
+
+@media(max-width:1024px){
+    .birdMap{
+        width: 400px;
+        height: 300px;
+        padding: 10px;
+    }
+
+
+}
+
+@media(max-width:768px) {
+    .birdMap{
+        width: 400px;
+        height: 300px;
+        padding: 10px;
+    }
+}
+
+@media(max-width:414px) {
+    .birdMap{
+        width: 280px;
+        height: 200px;
+        padding: 10px;
+    }
 }
