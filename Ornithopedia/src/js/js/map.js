@@ -16,7 +16,7 @@ $( document ).ready(function() {
         .center([2, -27])
         .parallels([-18, -36])
         .scale(Math.min(height * 2.2, width * 1.1))
-        .translate([width / 2, height / 2])
+        .translate([width / 2.5, height / 2])
         .precision(0.1);
 
     var path = d3.geoPath()

@@ -77,7 +77,9 @@
 
 .birdDescription p{
     padding: 20px;
-    text-align: left;
+    text-align: justify;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: medium;
 }
 
 .birdMap{

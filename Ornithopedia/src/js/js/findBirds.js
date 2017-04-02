@@ -12,7 +12,7 @@ $( document ).ready(function() {
     var d3 = require('d3');
     let jsonData = null;
     let birdDetailData = null;
-    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=5";
+    const endpoint = "https://bie.ala.org.au/ws/search.json?fq=rk_class:AVES&pageSize=2571";
 
     jsonData = $.getJSON(endpoint, function(data) {
     }).done(function(data){
@@ -22,12 +22,23 @@ $( document ).ready(function() {
             if (item.thumbnailUrl == null) {
             } else {
 
+                var sounds = [];
                 // url = "http://www.xeno-canto.org/api/2/recordings?query=cnt:%22Australia " + item.commonName.split(",")[0];
                 url = "http://www.xeno-canto.org/api/2/recordings?query=cnt:%22Australia%22%20Olive-backed%20Oriole";
 
-                $.getJSON(url, function (sound) {
-                }).done(function (sound) {
-                    console.log(sound);
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    success: function(data) {
+                        //stuff
+                        console.log(data);
+                        sounds.push({
+                            "file" : data.file
+                        });
+                    },
+                    beforeSend: function(xhr){
+                        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                    }
                 });
 
                 $("<div>")
@@ -66,12 +77,12 @@ $( document ).ready(function() {
                     )
                     .appendTo("#birdImages");
 
-                let url = "http://api.gbif.org/v1/species/match?rank=species&name=" + item.scientificName;
+                let url = "https://api.gbif.org/v1/species/match?rank=species&name=" + item.scientificName;
 
                 $.getJSON(url, function (data) {
                 }).done(function (data) {
 
-                    url = "http://api.gbif.org/v1/species/" + data.speciesKey + "/descriptions"
+                    url = "https://api.gbif.org/v1/species/" + data.speciesKey + "/descriptions"
                     birdDetailData = $.getJSON(url, function () {
                     }).done(function (birdData) {
                         let filteredDetail = birdData.results.filter(birdDetail => birdDetail.language == "eng");
@@ -202,7 +213,7 @@ $( document ).ready(function() {
                             var year = currentYear - 12;
                             var trendData = [];
                             while (year <= currentYear - 2) {
-                                url = "http://api.gbif.org/v1/occurrence/search?datasetkey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&country=au&limit=0&speciesKey=" + data.speciesKey + "&year=" + year;
+                                url = "https://api.gbif.org/v1/occurrence/search?datasetkey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&country=au&limit=0&speciesKey=" + data.speciesKey + "&year=" + year;
 
                                 const date = new Date(year, 1, 1);
                                 $.ajax({
@@ -276,13 +287,13 @@ $( document ).ready(function() {
                             var birdMap = L.map("map" + item.id);
                             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 
-                                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-                                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                                attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
                                 'Imagery © <a href="http://mapbox.com">Mapbox</a>',
                                 id: 'mapbox.streets'
                             }).addTo(birdMap);
 
-                            url = "http://api.gbif.org/v1/map/density/tile?x={x}&y={y}&z={z}&type=TAXON&key=" + data.speciesKey + "&layer=OBS_2000_2010&layer=SP_2000_2010&layer=OTH_2000_2010&layer=OBS_2010_2020&layer=SP_2010_2020&layer=OTH_2010_2020&layer=LIVING&layer=FOSSIL&palette=yellows_reds"
+                            url = "https://api.gbif.org/v1/map/density/tile?x={x}&y={y}&z={z}&type=TAXON&key=" + data.speciesKey + "&layer=OBS_2000_2010&layer=SP_2000_2010&layer=OTH_2000_2010&layer=OBS_2010_2020&layer=SP_2010_2020&layer=OTH_2010_2020&layer=LIVING&layer=FOSSIL&palette=yellows_reds"
                             var positron = L.tileLayer(url, {
                                 attribution: ''
                             }).addTo(birdMap);

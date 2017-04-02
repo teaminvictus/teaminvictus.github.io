@@ -12,13 +12,18 @@
     position: absolute;
 }
 
+section .container .intro-text{
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
 
 #section_map{
-    position: absolute;
+    position: relative;
     text-align: center;
     background: lightgray;
-    color: white;
-    top:100%;
+    color: grey;
     width:100%;
     height: 100%;
 }
@@ -39,4 +44,11 @@
     #section_map{
         height: 280px;
     }
+}
+
+.description{
+    padding: 20px;
+    text-align: justify;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: medium;
 }

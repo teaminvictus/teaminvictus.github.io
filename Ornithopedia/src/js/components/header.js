@@ -4,31 +4,39 @@
 import React from 'react';
 
 require("../js/headerImages");
+var logo = require("../../images/OnithoPedia.png");
 
 const Header = () => (
 
-      <section id="secHeader" className="demo">
+      <section id="secHeader" className="">
           <div className="container">
-              <div className="intro-text">
-                  <span className="name">Ornithopedia</span>
-                  <span>Get Involved With Birds</span>
-                  <div id="images" />
+              <div className="row">
+                <div className="col-lg-12">
+                    <img id="logo" src={logo}/>
+                </div>
+              </div>
+              <div className = "row">
+                  <div className="col-lg-12">
+                      <div id="images" />
+                  </div>
               </div>
               <div className="row">
                   <div className="col-lg-12">
                       <p>
-                          Discover Australia’s bird life and important places for birds and nature
+                          Australia has an extraordinary array of bird life with more than 2000 species.
                           <br />
-                          Find out what kind of bird near by?
+                          Unfortunately, many of them are under threat.
                           <br/>
-                          and what you can do to save them.
+                          The good news is that you can help them.
                           <br/>
-                          {/*<h5>Click below button to know more..!!</h5>*/}
                       </p>
                   </div>
               </div>
+              <div className = "row demo">
+                  <a href="#section_map"><span></span>Know More</a>
+              </div>
           </div>
-          <a href="#section_map"><span></span>Know More</a>
+
       </section>
 );
 

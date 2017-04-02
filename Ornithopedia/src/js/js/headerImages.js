@@ -14,6 +14,9 @@ import bird7 from '../../images/Birds/7.jpg';
 $( document ).ready(function() {
     var screenSize = function () {
         if ($(window).width() > 1024) {
+            $("#logo")
+                .attr("height", 120)
+                .attr("width", 150);
             $("<img>").attr("class", "boxshadow")
                 .attr('src', bird1)
                 .attr('id', 'birdimg1')
@@ -57,6 +60,9 @@ $( document ).ready(function() {
                 .attr('width', 300)
                 .appendTo("#images");
         }else if($(window).width() <= 1024 && $(window).width() > 768){
+            $("#logo")
+                .attr("height", 120)
+                .attr("width", 150);
             $("<img>").attr("class", "boxshadow")
                 .attr('src', bird1)
                 .attr('id', 'birdimg1')
@@ -100,6 +106,9 @@ $( document ).ready(function() {
                 .attr('width', 240)
                 .appendTo("#images");
         }else if($(window).width() <= 768 && $(window).width() > 414){
+            $("#logo")
+                .attr("height", 120)
+                .attr("width", 150);
             $("<img>").attr("class", "boxshadow")
                 .attr('src', bird1)
                 .attr('id', 'birdimg1')
@@ -143,6 +152,9 @@ $( document ).ready(function() {
                 .attr('width', 180)
                 .appendTo("#images");
         }else if($(window).width() <= 414){
+            $("#logo")
+                .attr("height", 50)
+                .attr("width", 65);
             $("<img>").attr("class", "boxshadow")
                 .attr('src', bird1)
                 .attr('id', 'birdimg1')

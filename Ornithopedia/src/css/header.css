@@ -1,11 +1,4 @@
-section {
-    text-align: center;
-    background: transparent;
-    color: grey;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
+
 
 #landingPage{
     background-color: white;
@@ -19,34 +12,18 @@ section .container {
     padding-bottom: 1%;
 }
 
-section .intro-text .name {
-    display: block;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3em;
-}
 
 @media(max-width:1024px){
     section{
         /*height: 640px;*/
     }
 
-    section .intro-text .name {
-        font-weight: 560;
-        font-size: 2.4em;
-    }
 
 }
 
 @media(max-width:768px) {
     section{
         /*height: 480px;*/
-    }
-
-    section .intro-text .name {
-        font-weight: 420;
-        font-size: 1.8em;
     }
 }
 
@@ -55,10 +32,6 @@ section .intro-text .name {
         /*height: 320px;*/
     }
 
-    section .intro-text .name {
-        font-weight: 224;
-        font-size: 1.8em;
-    }
 
     section .container {
         padding-top: 25%;
@@ -67,6 +40,8 @@ section .intro-text .name {
 }
 
 
+/******************************** Images ***********************************/
+/***************************************************************************/
 
 #images{
     display: block;
@@ -213,16 +188,19 @@ section .intro-text .name {
     /*background: url(http://www.nxworld.net/codepen/css-scroll-down-button/bg03.jpg) center center / cover no-repeat;*/
 /*}*/
 
+/*************************Know more button***********************************/
+/****************************************************************************/
+
 .demo a {
     position: absolute;
     bottom: 1%;
-    left: 47%;
+    left: 45%;
     z-index: 20;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: grey;
-    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    font: normal 400 20px/1 "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     letter-spacing: .1em;
     text-decoration: none;
     transition: opacity .3s;
@@ -236,16 +214,39 @@ section .intro-text .name {
     padding-top: 60px;
 }
 
+
 #secHeader a span {
     position: absolute;
     top: 0%;
-    left: 50%;
+    left: 45%;
     width: 46px;
     height: 46px;
     margin-left: -23px;
     border: 1px solid grey;
     border-radius: 100%;
     box-sizing: border-box;
+}
+
+
+@media(max-width:1024px){
+    #secHeader a span {
+        width : 36.8 px;
+        height: 36.8 px;
+    }
+}
+
+@media(max-width:768px) {
+    #secHeader a span {
+        width : 36.8 px;
+        height: 36.8 px;
+    }
+}
+
+@media(max-width:412px) {
+    #secHeader a span {
+        width : 15 px;
+        height: 15 px;
+    }
 }
 
 #secHeader a span::after {

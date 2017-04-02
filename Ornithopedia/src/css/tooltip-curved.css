@@ -49,42 +49,42 @@
 
 .tooltip:first-child {
 	top: 40%;
-	left: 67%;
+	left: 57%;
 }
 
 .tooltip:nth-child(2) {
 	top: 60%;
-	left: 75%;
+	left: 65%;
 }
 
 .tooltip:nth-child(3) {
 	top: 73%;
-	left: 71%;
+	left: 61%;
 }
 
 .tooltip:nth-child(4) {
 	top: 77%;
-	left: 65%;
+	left: 55%;
 }
 
 .tooltip:nth-child(5) {
 	top: 92%;
-	left: 66%;
+	left: 56%;
 }
 
 .tooltip:nth-child(6) {
 	top: 58%;
-	left: 50%;
+	left: 40%;
 }
 
 .tooltip:nth-child(7) {
 	top: 32%;
-	left: 48%;
+	left: 38%;
 }
 
 .tooltip:nth-child(8) {
 	top: 44%;
-	left: 30%;
+	left: 20%;
 }
 /* Tooltip */
 

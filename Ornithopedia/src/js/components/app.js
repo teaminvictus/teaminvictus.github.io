@@ -25,9 +25,7 @@ require("../../css/birdFinder.css");
 require("../../css/birdDetail.css");
 
 
-
 const App = () => (
-
     <div>
         <Navigation/>
         <div id="landingPage" >
