@@ -202,7 +202,8 @@ $( document ).ready(function() {
 
     screenSize();
     $(window).on('resize',function () {
-        location.reload();
+        $("#images").empty();
+        screenSize();
     });
 
 });

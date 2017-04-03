@@ -15,7 +15,7 @@ class BirdFinder extends Component{
         return(
             <section id="birdFinder" className="hideElement">
                 <div className="container">
-                    <form className="search-form">
+                    <form id="searchForm" className="search-form">
                         <input type="text" className="search" placeholder="Enter Bird Name..." />
                     </form>
                 </div>

@@ -5,6 +5,7 @@
 require('ui.leaflet.webpack');
 require('../js/leaflet');
 // require('mapbox-gl');
+// var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
 
 $( document ).ready(function() {
@@ -276,14 +277,52 @@ $( document ).ready(function() {
                                 // .ease("linear")
                                 .attr("stroke-dashoffset", 0);
 
-                            // mapboxgl.accessToken = 'pk.eyJ1IjoiMDhjcDAwOSIsImEiOiJjajA4cnh0cm8wNzJtMndyN3QwM2JpN2dwIn0.l91VeUJnIf19YunIB0G1yw';
-                            // var birdMap = new mapboxgl.Map({
-                            //     container: 'map'+item.id,
-                            //     style: 'mapbox://styles/mapbox/light-v9',
-                            //     zoom: 2,
-                            //     center: [133.7751, -25.2744]
-                            //
-                            // });
+
+                        // mapboxgl.accessToken = 'pk.eyJ1IjoiMDhjcDAwOSIsImEiOiJjajA4cnh0cm8wNzJtMndyN3QwM2JpN2dwIn0.l91VeUJnIf19YunIB0G1yw';
+                        //
+                        // url = "https://api.gbif.org/v1/map/density/tile?x={x}&y={y}&z={z}&type=TAXON&key=" + data.speciesKey + "&layer=OBS_2000_2010&layer=SP_2000_2010&layer=OTH_2000_2010&layer=OBS_2010_2020&layer=SP_2010_2020&layer=OTH_2010_2020&layer=LIVING&layer=FOSSIL&palette=yellows_reds";
+                        // var simple = {
+                        //     "version": 8,
+                        //     "sources": {
+                        //         "osm": {
+                        //             "type": "vector",
+                        //             "tiles": ["https://vector.mapzen.com/osm/all/{z}/{x}/{y}.mvt?api_key=vector-tiles-LM25tq4", url]
+                        //         },
+                        //         "birdTile":{
+                        //             "type":"vector",
+                        //             "tile": [url]
+                        //         }
+                        //     },
+                        //     "layers": [
+                        //         {
+                        //             "id": "background",
+                        //             "type": "background",
+                        //             "paint": {
+                        //                 "background-color": "#41afa5"
+                        //             }
+                        //         }, {
+                        //             "id": "water",
+                        //             "type": "fill",
+                        //             "source": "osm",
+                        //             "source-layer": "water",
+                        //             "filter": ["==", "$type", "Polygon"],
+                        //             "paint": {
+                        //                 "fill-color": "#3887be"
+                        //             }
+                        //         }
+                        //     ]
+                        // };
+                        //
+                        // var birdMap = new mapboxgl.Map({
+                        //         container: 'map'+item.id,
+                        //         // style: 'mapbox://styles/mapbox/light-v9',
+                        //         style: simple,
+                        //         zoom: 2,
+                        //         center: [133.7751, -25.2744]
+                        //
+                        //     });
+
+
                             var birdMap = L.map("map" + item.id);
                             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 
@@ -299,7 +338,6 @@ $( document ).ready(function() {
                             }).addTo(birdMap);
                             //
                             birdMap.setView([0, 10], 1);
-                        // })
                     })
                 });
 
@@ -350,5 +388,9 @@ $( document ).ready(function() {
 
     searchInput.addEventListener('change', displayMatches);
     searchInput.addEventListener('keyup', displayMatches);
+    // $("#searchForm").submit(function() {
+    //     search($(".search").get(0));
+    //     return false;
+    // });
 
 });
