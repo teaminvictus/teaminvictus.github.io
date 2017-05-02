@@ -1,0 +1,45 @@
+footer{padding-top:15px;}
+
+footer p{
+    font-size:14px;
+    color:#fff;
+    text-align: right;
+}
+
+footer i:hover{color: #cecece;}
+
+footer a {color: #fff;}
+
+/* Social Media icons */
+
+footer .social-media i{font-size:25px;}
+
+footer .social-media {
+    margin-top:0px;
+    text-align:left;
+}
+
+footer .social-media li{display:inline-block;}
+
+/* Go to top icon */
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 57px;
+    right: 12px;
+    z-index:10;
+}
+
+.back-to-top i {
+    display: block;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    font-size:20px;
+    color: #fff;
+    border-radius: 0px;
+    text-align: center;
+    background-color: #333;
+    transition: all 0.2s ease-in-out;
+}

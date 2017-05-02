@@ -1,0 +1,64 @@
+#helpSection {background-color:#eee;}
+
+#helpSection .paneltab{
+    background-color:#fff;
+    padding:60px 20px;
+}
+
+.tab-content > .active {display: block;}
+
+/* tab fade effect */
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.55s linear;
+}
+
+/* hover icons circles */
+
+.box{margin-top: 40px;}
+
+.box > .icon{
+    position: relative;
+    text-align: center;
+}
+
+.box > .icon > .image{
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    vertical-align: middle;
+    width: 98px;
+    z-index: 2;
+    margin-bottom: 20px;
+    border: 2px dotted;
+}
+
+.box > .icon > .image > span{
+    font-size: 66px !important;
+    color: #333;
+}
+
+.box > .icon:hover > .image > span{color: #fff !important;}
+
+.box > .icon:hover > .info > .box > .icon:hover > .info > .more > a{color: #333;}
+
+.box > .icon:hover > .image{transition: background .3s ease-in-out;}
+
+/* Team */
+
+.team {margin-top:40px;}
+
+.caption-team{margin-top:30px;}
+
+.team img{max-width:180px;}
+
+.team .img-wrapper {display:inline-block}
+
+.team h5{line-height: 12px;}
+
+.team span {
+    font-size:18px;
+    font-weight:400;
+    line-height:38px;
+}

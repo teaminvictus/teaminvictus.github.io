@@ -1,24 +1,157 @@
-body{
-    position: relative;
-    height: 100%;
+/*body{*/
+    /*position: relative;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*#root{*/
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.hideElement{*/
+    /*!*display: none;*!*/
+/*}*/
+
+/*section {*/
+    /*text-align: center;*/
+    /*background: transparent;*/
+    /*color: grey;*/
+    /*height:100%;*/
+    /*width: 100%;*/
+    /*position: relative;*/
+/*}*/
+
+/*@media(max-height : 800px){*/
+    /*section {*/
+        /*height: 800px;*/
+    /*}*/
+/*}*/
+
+
+
+
+/*@media(max-width : 768px) {*/
+    /*section {*/
+        /*height: 100%;*/
+    /*}*/
+/*}*/
+
+/*@media(max-height : 414px){*/
+    /*section {*/
+        /*height: 700px;*/
+    /*}*/
+/*}*/
+
+
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html{
     width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'nunito',sans-serif;
+    font-weight: 300;
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.rootDiv{
+    width: 100%;
+    height: 100%;
+    font-family: 'nunito',sans-serif;
+    font-weight: 300;
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 #root{
-    position: absolute;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    font-family: 'nunito',sans-serif;
+    font-weight: 300;
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
-.hideElement{
-    display: none;
+
+
+
+p{
+    font-size: 17px;
+    line-height: 27px;
+    color:#717171;
+    margin: 0;
 }
 
-section {
+/* Headings */
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: 400;
+    font-size:18px;
+    color:#333;
+}
+
+h1 {
+    text-transform:uppercase;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+    text-transform:uppercase;
+    margin-top:0;
+}
+
+h3 {
+    font-family: 'nunito',sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-family: 'nunito',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
     text-align: center;
-    background: transparent;
-    color: grey;
-    height: 100%;
-    width: 100%;
-    position: relative;
 }
+
+h5 {
+    font-size: 25px;
+    font-family: 'nunito',sans-serif;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 18px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'nunito',sans-serif;
+    font-weight: 400;
+}
+
+/* Links */
+
+a {transition: all .2s ease-in-out;}
+
+a:hover,
+a:focus {text-decoration: none;}

@@ -10,7 +10,9 @@ module.exports = {
     devServer: {
         inline: true,
         contentBase: './build',
-        port: 3000
+        port: 3000,
+        publicPath : '/',
+        historyApiFallback:true,
     },
     devtool: 'source-map',
     entry: './src/js/index.js',
@@ -70,6 +72,7 @@ module.exports = {
     },
     output: {
         path: './build',
+
         filename: 'js/bundle.min.js'
     },
     plugins: [

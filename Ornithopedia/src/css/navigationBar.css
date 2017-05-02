@@ -1,0 +1,147 @@
+.navbar-toggle {color:#fff;}
+
+.navbar {
+    background-color:#fff;
+    margin-bottom: 0;
+    z-index:900;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.23);
+    -moz-box-shadow:0px 0px 2px 0px rgba(50, 50, 50, 0.23);
+    box-shadow:0px 0px 7px 0px rgba(50, 50, 50, 0.23);
+}
+
+.navbar-nav > li > a {
+    line-height: 43px;
+    padding: 10px 0px 10px 35px;
+}
+
+.navbar-custom ul.nav li a {
+    font-size: 14px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    font-family: 'nunito', sans-serif;
+}
+
+.nav > li > a{
+    font-family: 'nunito', sans-serif;
+    font-weight: 700;
+    text-transform:uppercase;
+    transition: background .3s ease-in-out;
+    color:#333;
+}
+
+.navbar-custom .nav li a:hover{
+    background-color: rgba(255, 255, 255, 0);
+    outline: 0;
+}
+
+.navbar-custom .nav li a:focus{
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom:none;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-custom ul.nav ul.dropdown-menu {border-radius: 0;}
+
+.navbar-custom ul.nav ul.dropdown-menu li {border-bottom: 1px solid #f5f5f5;}
+
+.navbar-custom ul.nav ul.dropdown-menu li:last-child {border-bottom: none;}
+
+.navbar-custom ul.nav ul.dropdown-menu li a {padding: 10px 20px;}
+
+.navbar-toggle:focus,
+.navbar-toggle:active {outline: 0;}
+
+.navbar-toggle {font-size: 16px;}
+
+.navbar-fixed-top {border-width: 0 0 0px;}
+
+/* top-bar */
+
+.top-bar ul,ol {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.top-bar.color-bar ul.social-list i {border-left: 1px solid rgba(255, 255, 255, .1);}
+
+.top-bar.color-bar ul.social-list li:last-child i {border-right: 1px solid rgba(255, 255, 255, .1);}
+
+.top-bar.color-bar .contact-details li:before {color: rgba(255, 255, 255, .2);}
+
+.top-bar a {color: #fff;}
+
+.top-bar .contact-details li:first-child {margin-left: 0px;}
+
+.top-bar .contact-details i {margin-right: 5px;}
+
+.top-bar .contact-details li {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+/* top-bar Social icons */
+
+ul.social-list {
+    float: right;
+    list-style-type: none;
+}
+
+ul.social-list li {
+    float: left;
+}
+
+ul.social-list li a {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+}
+
+ul.social-list li a:hover {
+    color: #fff;
+    transition: background .3s ease-in-out;
+}
+
+ul.social-list li a i {
+    font-size: 1em;
+    display: block;
+    width: 34px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*===========================
+  Logo
+============================ */
+
+.navbar-brand {
+    font-size: 25px;
+    line-height: 30px;
+    margin-left: 0px;
+    color:#333;
+    text-transform:uppercase;
+    font-family: 'Bree Serif', serif;
+    padding: 8px 8px;
+}
+
+.navbar-brand img{
+    float: left;
+    margin-left: 10px;
+}
+/*Logo icon */
+
+.navbar-brand span{
+    display: inline-block;
+    margin-bottom:10px;
+    margin-right:10px;
+}
