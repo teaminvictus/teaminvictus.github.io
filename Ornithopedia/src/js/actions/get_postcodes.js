@@ -42,11 +42,13 @@ function getPostcodesFulfilledAction(postcodes) {
     };
 }
 
+
+
 export function displayMatches(){
     // value of input field
     // $("#birdImages").empty();
     var wordToMatch = $("search").prevObject[0].activeElement.value;
-    if(wordToMatch.length == 0) {
+    if(wordToMatch.length < 3) {
         wordToMatch = "!@#$%^&*()";
     }
     // value of postcodes
@@ -74,6 +76,7 @@ function filterPostcodesByNameAction(matchPostcodes){
     }
 }
 
+
 export function selectPostcode(postcode){
 
     $("#postcodeInput").val(postcode.suburb + ", " + postcode.state + ", " + postcode.postcode);
@@ -84,29 +87,87 @@ export function selectPostcode(postcode){
         //     dispatch(getBirds());
         // };
         dispatch(getSelectedPostcodeFulfilled(postcode));
-        const url = "http://ebird.org/ws1.1/data/obs/geo/recent?lng="+ postcode.longitude +"&lat=" + postcode.latitude + "&dist=5&back=7&maxResults=500&fmt=json";
-        $.getJSON(url, function(data) {
-        }).done(function(data){
-            var birdsForIdentifier = [];
 
-            for ( var i=0, len=data.length; i < len; i++ )
-                birdsForIdentifier[data[i]['comName']] = data[i].comName;
 
-            data = new Array();
-            for ( var key in birdsForIdentifier )
-                data.push(birdsForIdentifier[key]);
 
-            const birds = store.getState().birds.birds;
+        var dist = 0;
+        var days = 7;
+        var birdData = null;
 
-            birdsForIdentifier = new Array();
-            data.map(birdName => {
-                const b = birds.filter(bird => (bird.commonName.localeCompare(birdName.replace('-', ' ')) == 0))[0];
-                if (b != null)
-                    birdsForIdentifier.push(b);
+        do {
+            dist = dist + 5;
+            const url = "http://ebird.org/ws1.1/data/obs/geo/recent?lng=" + postcode.longitude + "&lat=" + postcode.latitude + "&dist=" + dist + "&back=" + days + "&maxResults=500&fmt=json";
+            console.log(url);
+
+            birdData = $.ajax({
+                url: url,
+                dataType: 'json',
+                async: false,
+                success: function(data) {
+                    //stuff
+                    var birdsForIdentifier = [];
+
+                    for (var i = 0, len = data.length; i < len; i++)
+                        birdsForIdentifier[data[i]['comName']] = data[i].comName;
+
+                    data = new Array();
+                    for (var key in birdsForIdentifier)
+                        data.push(birdsForIdentifier[key]);
+
+                    const birds = store.getState().birds.birds;
+
+                    birdsForIdentifier = new Array();
+                    data.map(birdName => {
+                        const b = birds.filter(bird => (bird.commonName.localeCompare(birdName.replace('-', ' ')) == 0))[0];
+                        if (b != null)
+                            birdsForIdentifier.push(b);
+                    });
+                    dispatch(getBirdsForIdentifierAction(birdsForIdentifier))
+                }
             });
-            dispatch(getBirdsForIdentifierAction(birdsForIdentifier))
-        });
+
+            console.log(birdData.responseJSON);
+        }while(birdData.responseJSON.length == 0 && dist != 50)
+
+        // console.log(birdData.responseJSON);
     };
+}
+
+export function displayPostcodeMatches(){
+    // value of input field
+    // $("#birdImages").empty();
+    var wordToMatch = $("search").prevObject[0].activeElement.value;
+    if(wordToMatch.length < 3) {
+        wordToMatch = "!@#$%^&*()";
+    }
+    // value of postcodes
+    var postcodes = [];
+    if (store.getState().postcodes.postcodes != null){
+        postcodes = store.getState().postcodes.postcodes;
+    }
+    const matchPostcodesForRecordSighting = findMatches(wordToMatch, postcodes);
+    return dispatch => {
+        if(matchPostcodesForRecordSighting.length == 0){
+            const postcode = null;
+            dispatch(selectPostcodeForRecordSighting(postcode));
+        }
+        dispatch(filterPostcodesForRecordSightingByNameAction(matchPostcodesForRecordSighting))
+    };
+}
+
+function filterPostcodesForRecordSightingByNameAction(matchPostcodesForRecordSighting){
+    return {
+        type: ActionTypes.filterPostcodesForRecordSightingByName,
+        matchPostcodesForRecordSighting
+    }
+}
+
+export function selectPostcodeForRecordSighting(postcode) {
+    if(postcode != null)
+        $("#location").val(postcode.suburb + ", " + postcode.state + ", " + postcode.postcode);
+    return dispatch => {
+        dispatch(getSelectedPostcodeForRecordSightingFulfilled(postcode));
+    }
 }
 
 function getSelectedPostcodeFulfilled (postcode){
@@ -115,6 +176,15 @@ function getSelectedPostcodeFulfilled (postcode){
         type : ActionTypes.GetSelectedPostcodeFulfilled,
         selectedPostcode : postcode,
         matchPostcodes
+    }
+}
+
+function getSelectedPostcodeForRecordSightingFulfilled (postcode){
+    const matchPostcodesForRecordSighting = [];
+    return{
+        type : ActionTypes.GetSelectedPostcodeForRecordSightingFulfilled,
+        selectedPostcodeForRecordSighting : postcode,
+        matchPostcodesForRecordSighting
     }
 }
 

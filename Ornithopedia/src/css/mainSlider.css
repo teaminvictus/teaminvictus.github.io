@@ -184,7 +184,7 @@ ul.slider-pagi {padding-left:0px;}
 
 .slide:nth-child(1) .slide__bg {
     left: 0;
-    background-image: url(../images/Birds/2.jpg);
+    background-image: url(../images/Birds/4.jpg);
 }
 
 /* slide2 */
@@ -316,7 +316,7 @@ ul.slider-pagi {padding-left:0px;}
     clear: left;
     display: block;
     height: 0;
-    margin: 20px auto 0px auto;
+    margin: 15px auto 15px auto;
     width: 100%;
 }
 
@@ -333,7 +333,7 @@ ul.slider-pagi {padding-left:0px;}
 }
 
 .section-heading{
-    margin-bottom:120px;
+    margin-bottom:80px;
     text-align:center;
 }
 
@@ -348,7 +348,7 @@ ul {font-size: 16px;}
 
 /* Buttons */
 
-.btn {
+#root .btn {
     margin-top:1em;
     border:none;
     padding:15px;
@@ -366,9 +366,32 @@ ul {font-size: 16px;}
     position: relative;
     transition-property: color;
     transition-duration: 0.3s;
+    height: 50px;
 }
 
-.btn:before {
+#root .btn1 {
+    margin-top:1em;
+    border:none;
+    padding:15px;
+    font-size: 15px;
+    font-weight:400;
+    border-radius: 0px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: #bbb;
+    cursor: default;
+}
+
+#root .btn:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -383,25 +406,25 @@ ul {font-size: 16px;}
     transition-timing-function: ease-out;
 }
 
-.btn:hover, .btn:focus, .btn:active {color: white;}
+#root .btn:hover, .btn:focus, .btn:active {color: white;}
 
-.btn:hover:before, .btn:focus:before, .btn:active:before {
+#root .btn:hover:before, .btn:focus:before, .btn:active:before {
     transform: scaleX(1);
 }
 
 /* Default Button */
 
-.btn-default {color: #fff;}
+#root .btn-default {color: #fff;}
 
-.btn-default:hover ,
-.btn-default:focus {
+#root .btn-default:hover ,
+#root .btn-default:focus {
     outline:0;
     color: #fff;
 }
 
-.btn-lg{margin-top:20px;}
+#root .btn-lg{margin-top:20px;}
 
-.light-btn .btn:before{background-color: #fff;}
+#root .light-btn .btn:before{background-color: #fff;}
 
 /* Social Media Icons */
 

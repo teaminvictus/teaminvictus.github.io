@@ -1,6 +1,81 @@
 #birdIdentifier{
     margin-top: 63px;
-    /*position: absolute;*/
+    position: absolute;
+    width: 100%;
+}
+
+
+#birdIdentifier input {
+    width: 100%;
+    padding:10px;
+    margin: 8px;
+    height: 5rem;
+    margin-bottom: 0px;
+}
+
+#birdIdentifier input[type=text] {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    /*background-color: white;*/
+    background-image: url('../images/searchicon.png');
+    background-position: 12px 12px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#birdIdentifier input:focus {
+    outline: none !important;
+    border:1px solid #d35400;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 3px;
+}
+
+#birdIdentifier .searchBar{
+    height: 65px !important;
+    background: #ffffff !important;
+    position: fixed !important;
+    z-index: 9 !important;
+    border-bottom: 1px solid #DBDBDB !important;
+    width: 100%;
+}
+
+
+@media(max-width:414px) {
+
+    #birdIdentifier input.search {
+        border: 4px solid #F7F7F7;
+        width: 110%;
+        left: -4%;
+        position: relative;
+        top: 4px;
+        z-index: 2;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    }
+
+    #birdIdentifier input {
+        padding: 8px;
+    }
+}
+
+@media(max-width:320px) {
+
+    #birdIdentifier input.search {
+        border: 4px solid #F7F7F7;
+        width: 110%;
+        left: -4%;
+        top: 4px;
+        font-size: 16px;
+    }
+
+    #birdIdentifier input {
+        padding: 8px;
+    }
 }
 
 #birdIdentifierGallery{
@@ -32,7 +107,7 @@
     justify-content:space-between;
     /*text-transform: capitalize;*/
     text-align: center;
-    border-radius: 25px;
+    border-radius: 3px;
 }
 
 .suggestions li:hover {

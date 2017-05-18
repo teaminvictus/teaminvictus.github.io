@@ -38,12 +38,30 @@ export function postcodesReducer(state = {}, action) {
             });
             return newState;
         }
+        case ActionTypes.filterPostcodesForRecordSightingByName: {
+
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'Got filtered birds for Record Sighting.',
+                matchPostcodesForRecordSighting : action.matchPostcodesForRecordSighting,
+            });
+            return newState;
+        }
         case ActionTypes.GetSelectedPostcodeFulfilled: {
             const newState = Object.assign({}, state, {
                 inProgress: false,
                 success: 'Postcode Selected',
                 selectedPostcode : action.selectedPostcode,
                 matchPostcodes : action.matchPostcodes
+            });
+            return newState;
+        }
+        case ActionTypes.GetSelectedPostcodeForRecordSightingFulfilled: {
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'Postcode Selected',
+                selectedPostcodeForRecordSighting : action.selectedPostcodeForRecordSighting,
+                matchPostcodesForRecordSighting : action.matchPostcodesForRecordSighting
             });
             return newState;
         }

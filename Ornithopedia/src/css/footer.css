@@ -3,12 +3,14 @@ footer{padding-top:15px;}
 footer p{
     font-size:14px;
     color:#fff;
-    text-align: right;
 }
 
 footer i:hover{color: #cecece;}
 
-footer a {color: #fff;}
+footer a {
+    color: #fff;
+    font-weight: bold;
+}
 
 /* Social Media icons */
 
@@ -21,6 +23,10 @@ footer .social-media {
 
 footer .social-media li{display:inline-block;}
 
+
+footer .padding-left-2{
+    padding-left: 2px;
+}
 /* Go to top icon */
 
 .back-to-top {
@@ -42,4 +48,9 @@ footer .social-media li{display:inline-block;}
     text-align: center;
     background-color: #333;
     transition: all 0.2s ease-in-out;
+}
+
+footer span{
+    font-weight: bold;
+    font-size: 1.2em;
 }

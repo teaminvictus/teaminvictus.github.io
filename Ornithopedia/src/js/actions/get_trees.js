@@ -83,7 +83,6 @@ export function selectTree(tree){
     }else{
         var treeUrl = require("../../images/Trees/treePlaceholder.jpg");
     }
-    console.log(treeUrl);
     return{
         type : ActionTypes.treeSelected,
         selectedTree : tree,

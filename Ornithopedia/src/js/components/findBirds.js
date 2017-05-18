@@ -2,8 +2,12 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Pagination from 'react-js-pagination';
 import store from '../store/store';
+import Footer from './footer';
+import Preloader from './preloader';
 
 const IMAGES_PER_PAGE = 8;
+
+import endangered from '../../images/Birds/endangered.png';
 
 export default class FindBirds extends React.Component {
 
@@ -32,6 +36,63 @@ export default class FindBirds extends React.Component {
 
     }
 
+    renderEndangeredStatus(bird){
+        if(bird.status.localeCompare("Endangered") == 0){
+            return(
+                <div className="endangered">
+                    <img src={endangered} height="30" width="30" />
+                </div>
+            );
+        }
+    }
+
+    renderBirdStatus(bird){
+        if(bird.status.localeCompare("Endangered") == 0){
+            return(
+                <span className="subText endangeredStatus"> {bird.status}</span>
+                    );
+        }else{
+            return(
+                <span className="subText"> {bird.status}</span>
+            );
+        }
+    }
+
+    renderFoodSource(bird){
+        var foodSource = "";
+        if(bird.fruit == 1)
+            foodSource = foodSource + "Fruits, ";
+        if(bird.insect == 1)
+            foodSource = foodSource + "Insects, ";
+        if(bird.nectar == 1)
+            foodSource = foodSource + "Nectar, ";
+        if(bird.seed == 1)
+            foodSource = foodSource + "Seed, ";
+        if(bird.smallFish == 1)
+            foodSource = foodSource + "small fishes, ";
+
+        if(foodSource.length == 0)
+            foodSource = "Data Not Available";
+        else
+            foodSource = foodSource.substr(0,foodSource.length - 2);
+        return(
+            foodSource
+        )
+    }
+
+    renderBirdSound(bird){
+        if(bird.isSoundAvilable == 1){
+            return(
+                <div className="col-sm-9">
+                    <audio controls>
+                        <source src={bird.soundLink} type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            );
+        }
+    }
+
     render() {
     const birds = this.props.birds.matchBirds;
     const birdCount = birds && birds.length;
@@ -48,7 +109,7 @@ export default class FindBirds extends React.Component {
 
 
         <div id="birdImages">
-            <center>
+            <div className="text-center">
                 {birdsForPage && birdsForPage.length > 0 ? (
                     <div>
                         {birdsForPage.map((bird, index) => {
@@ -61,28 +122,34 @@ export default class FindBirds extends React.Component {
                             {/*console.log(birdUrl);*/}
                             return (
                                 <div key={bird.birdId} className="card image-item">
-                                    {/*<Link to={"/birdFinder/" + bird.birdId} onClick={() => {this.props.onSelectBird(bird)}}>*/}
-                                    <Link to={"/birdFinder/" + bird.birdId} >
-                                        {/*<a href={"#" + bird.bird_Id} className="image-link" data-toggle="modal">*/}
-                                        <div className="image-link">
+                                    <div className="image-link">
+
+                                        <Link to={"/birdFinder" + bird.birdId} >
                                             <div className="caption">
                                                 <div className="caption-content">
                                                     <i className="fa fa-search-plus fa-3x"/>
                                                 </div>
                                             </div>
+                                            {this.renderEndangeredStatus(bird)}
                                             <img src={birdUrl} height="200" width="300"/>
-                                            <div className="title">
-                                                <span>{bird.commonName}</span>
-                                            </div>
+                                        </Link>
+                                        <div className="title">
+                                            <span>{bird.commonName}</span>
+                                            <div className="hr"></div>
+                                            {/*<hr className="star-primary" />*/}
+                                            Status: {this.renderBirdStatus(bird)}
+                                            <br />
+                                            Food Source : {this.renderFoodSource(bird)}
+                                            <br/>
+                                            {this.renderBirdSound(bird)}
                                         </div>
-                                        {/*</a>*/}
-                                    </Link>
+                                    </div>
                                 </div>
                             );
                         })}
                     </div>
-                ) : null}
-            </center>
+                ) : <Preloader/>}
+            </div>
         </div>
         <div id="birdPagination">
             <center>
@@ -95,6 +162,7 @@ export default class FindBirds extends React.Component {
                 />
             </center>
         </div>
+        <Footer/>
     </section>
     );
     }

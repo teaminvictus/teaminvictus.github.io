@@ -53,12 +53,40 @@ export function treesReducer(state = {}, action) {
             return state;
         }
         case ActionTypes.treeSelected: {
-            console.log(action);
             const newState = Object.assign({}, state, {
                 inProgress: false,
                 success: 'Tree Selected',
                 selectedTree : action.selectedTree,
                 treeUrl : action.treeUrl
+            });
+            return newState;
+        }
+        case ActionTypes.GetLikelyBirdsRequested: {
+            return Object.assign({}, state, {
+                inProgress: true,
+                error: '',
+                success: ''
+            });
+        }
+        case ActionTypes.GetLikelyBirdsRejected: {
+            return Object.assign({}, state, {
+                inProgress: false,
+                error: 'Error in getting likely Birds for selected tree.',
+            });
+        }
+        case ActionTypes.GetLikelyBirdsFulfilled: {
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'likely birds Selected',
+                likelyBirds : action.likelyBirds
+            });
+            return newState;
+        }
+        case ActionTypes.GetSelectedTreeFulfilled: {
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'tree Selected',
+                selectedTree : action.selectedTree
             });
             return newState;
         }

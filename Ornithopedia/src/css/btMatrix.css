@@ -5,6 +5,72 @@
     width: 100%;
 }
 
+
+#btMatrix input {
+    width: 100%;
+    padding:10px;
+    margin: 8px;
+    height: 5rem;
+    margin-bottom: 0px;
+}
+
+#btMatrix input[type=text] {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    /*background-color: white;*/
+    background-image: url('../images/searchicon.png');
+    background-position: 12px 12px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#btMatrix input:focus {
+    outline: none !important;
+    border:1px solid #d35400;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 3px;
+}
+
+
+@media(max-width:414px) {
+
+    #btMatrix input.search {
+        border: 4px solid #F7F7F7;
+        width: 110%;
+        left: -4%;
+        position: relative;
+        top: 4px;
+        z-index: 2;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    }
+
+    #btMatrix input {
+        padding: 8px;
+    }
+}
+
+@media(max-width:320px) {
+
+    #btMatrix input.search {
+        border: 4px solid #F7F7F7;
+        width: 110%;
+        left: -4%;
+        top: 4px;
+        font-size: 16px;
+    }
+
+    #btMatrix input {
+        padding: 8px;
+    }
+}
+
+
 .progressBar{
     height: 75px !important;
     background: #ffffff !important;
@@ -15,14 +81,15 @@
 }
 
 .btBottom{
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 15%;
     bottom: 20px;
 }
 
 .btBottom .btn{
-    width : 150px;
+    width : 100%;
 }
+
 
 .btSteps{
     margin-top : 80px;
@@ -37,8 +104,30 @@
 }
 
 .btStepsTitle{
+    margin-top : 50px;
+}
+
+.btStepsTitle .section-heading{
+    margin-bottom: 40px;
+}
+
+#instructions .btStepsTitle{
     margin-top : 120px;
 }
+
+#pickLocation .btStepsTitle{
+    margin-top : 120px;
+}
+
+#pickLocation .btStepsTitle .section-heading{
+    margin-bottom: 80px;
+}
+
+#selectBirds, #selectTrees, #createMatrix{
+    overflow-y: auto;
+    height: 540px;
+}
+
 
 .btSteps .btn{
     font-size: 20px;
@@ -78,9 +167,9 @@
     color: #bbb;
     display: block;
 }
-#btMatrix .progress-indicator > li:hover {
-    color: #6f6f6f;
-}
+/*#btMatrix .progress-indicator > li:hover {*/
+    /*color: #6f6f6f;*/
+/*}*/
 #btMatrix .progress-indicator > li .bubble {
     border-radius: 1000px;
     width: 20px;
@@ -154,11 +243,25 @@
     display: none;
 }
 
+#btMatrix ol{
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+#btMatrix ol li{
+    margin-left: 20px;
+}
+
+#btMatrix ol li span{
+    font-weight: normal;
+}
+
+
 .unSelect{
     width: 30px;
     height: 30px;
     position: absolute;
-    margin-left: 85%;
+    margin-left: 50%;
     margin-top: 30%;
     z-index: 3;
     background: url("../images/Birds/unselect.png");
@@ -168,8 +271,55 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    margin-left: 85%;
+    margin-left: 50%;
     margin-top: 30%;
     z-index: 3;
     background: url("../images/Birds/select1.png");
+}
+
+@media(max-width:768px) {
+    #btMatrix{
+        margin-top:58px;
+    }
+
+}
+
+@media(max-width:414px) {
+    .select{
+        margin-top: -5%;
+    }
+    .unSelect{
+        margin-top: -5%;
+    }
+    .progressBar{
+        height: 90px !important;
+    }
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #aaaaaa;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.vertical-text {
+    transform: rotate(90deg);
+    text-align: center;
+    border: 1px solid #aaaaaa;
+    padding: 0px;
+}
+
+.noBorder th{
+    border: none;
 }

@@ -13,13 +13,21 @@ const actionTypes = {
     GetBirdCountRejected: 'GET_BIRD_COUNT_REJECTED',
     GetBirdCountFulfilled: 'GET_BIRD_COUNT_FULFILLED',
 
+    GetLikelyTreesRequested: 'GET_LIKELY_TREES_REQUESTED',
+    GetLikelyTreesRejected: 'GET_LIKELY_TREES_REJECTED',
+    GetLikelyTreesFulfilled: 'GET_LIKELY_TREES_FULFILLED',
+
+    GetLikelyBirdsRequested: 'GET_LIKELY_BIRDS_REQUESTED',
+    GetLikelyBirdsRejected: 'GET_LIKELY_BIRDS_REJECTED',
+    GetLikelyBirdsFulfilled: 'GET_LIKELY_BIRDS_FULFILLED',
+
 
     GetTreesRequested: 'GET_TREES_REQUESTED',
     GetSelectedTreeRequested: 'GET_SELECTED_TREE_REQUESTED',
     GetTreesRejected: 'GET_TREES_REJECTED',
     GetSelectedTreeRejected: 'GET_SELECTED_TREE_REJECTED',
     GetTreesFulfilled: 'GET_TREES_FULFILLED',
-    GetSelectedTreesFulfilled: 'GET_SELECTED_TREE_FULFILLED',
+    GetSelectedTreeFulfilled: 'GET_SELECTED_TREE_FULFILLED',
 
     GetPostcodesRequested: 'GET_POSTCODES_REQUESTED',
     GetSelectedPostcodeRequested: 'GET_SELECTED_POSTCODE_REQUESTED',
@@ -28,7 +36,12 @@ const actionTypes = {
     GetPostcodesFulfilled: 'GET_POSTCODES_FULFILLED',
     GetSelectedPostcodeFulfilled: 'GET_SELECTED_POSTCODE_FULFILLED',
 
+
+    GetSelectedPostcodeForRecordSightingFulfilled: 'GET_SELECTED_POSTCODE_FOR_RECORD_SIGHTING_FULFILLED',
+    GetSelectedBirdForRecordSightingFulfilled: 'GET_SELECTED_BIRD_FOR_RECORD_SIGHTING_FULFILLED',
+
     filterBirdsByName: 'FILTER_BIRDS_BY_NAME',
+    filterBirdsForRecordSightingByName: 'FILTER_FOR_RECORD_SIGHTING_BIRDS_BY_NAME',
     birdSelected: 'BIRD_SELECTED',
     changeBirdsForPage : 'CHANGE_BIRDS_FOR_PAGE',
 
@@ -37,6 +50,7 @@ const actionTypes = {
     changeTreesForPage : 'CHANGE_TREES_FOR_PAGE',
 
     filterPostcodesByName: 'FILTER_POSTCODES_BY_NAME',
+    filterPostcodesForRecordSightingByName: 'FILTER_POSTCODES_FOR_RECORD_SIGHTING_BY_NAME',
 
     GetAuStatesFulfilled: 'GET_AU_STATES_FULFILLED',
     filterAuStatesByName: 'FILTER_AU_STATES_BY_NAME',
@@ -44,7 +58,11 @@ const actionTypes = {
 
     GetBirdsForIdentifierRequested : 'GET_BIRDS_FOR_IDENTIFIER_REQUESTED',
     GetBirdsForIdentifier : 'GET_BIRDS_FOR_IDENTIFIER',
-    GetFilteredBirdsForIdentifier : 'GET_FILTERED_BIRDS_FOR_IDENTIFIER'
+    GetFilteredBirdsForIdentifier : 'GET_FILTERED_BIRDS_FOR_IDENTIFIER',
+
+    ConvertImageToBase64 : 'CONVERT_IMAGE_TO_BASE64',
+
+    SetMatrixStep : 'SET_MATRIX_STEP'
 };
 
 export default actionTypes;

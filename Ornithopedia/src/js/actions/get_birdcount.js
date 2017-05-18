@@ -8,10 +8,11 @@ import store from '../store/store';
 export function getBirdCount(birdId) {
     return dispatch => {
         dispatch(getBirdCountRequestedAction());
-        console.log(birdId);
         return database.ref('birdCount').orderByChild("birdId").equalTo(birdId).once('value', snap => {
-            const birdCount = snap.val();
-            console.log(birdCount);
+            var birdCount = [];
+            snap.forEach((child) => {
+                birdCount.push(child.val());
+            });
             dispatch(getBirdCountFulfilledAction(birdCount))
         })
         .catch((error) => {
@@ -27,14 +28,13 @@ function getBirdCountRequestedAction() {
     };
 }
 
-
 function getBirdCountRejectedAction() {
     return {
         type: ActionTypes.GetBirdCountRejected
     }
 }
 
-function getBirdCountFulfilledAction(selectedBirdCount) {
+export function getBirdCountFulfilledAction(selectedBirdCount) {
     return {
         type: ActionTypes.GetBirdCountFulfilled,
         selectedBirdCount

@@ -31,42 +31,23 @@ const HelpSection = () => (
                     {/*<!-- Panel  1 -->*/}
                     <div id="pane1" className="paneltab tab-pane fade active in">
                         <div className="row">
-                            <div className="col-md-12 col-sm-12">
-                                <div className="col-lg-7 col-md-6 col-sm-12 res-margin wow fadeInRight" data-wow-delay="0.2s">
-                                    <h3>We take care of your best friend</h3>
-                                    <p>Interdum donec eget metus auguen unc vel mauris ultricies, vest ao ibulum orci eget,  blandit quam elit, eu imperdiet neque semper lorem ipsum dolores viverra elit Aliquam erat volutpat phase llus ac sodales felis tiam non metus aliquam eros accumsan mollis eget vitae tellusm.
-                                        Sed in lobortis nisl Phasellus ultrices gravida massa luctus ornare. Aliquam erat volutpat phas ellus sodales felis tiam non metus aliquam eros accumsan mollis eget vitae tellusm Pellentesque turpis lectus, placerat a ultricies a, posuere lorem ipsuet.</p>
-                                </div>
-                                <div className="col-lg-5 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0.2s">
-                                    <img src="img/about.png" alt="" className="img-responsive"/>
-                                </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 res-margin">
+                                <h3>Bird-Friendly Backyard</h3>
+                                <p>The bird’s shelter and food source are decreasing over the years because of
+                                    human activity, such as urbanization, agriculture activities, deforestation, etc.
+                                    Without food and shelter, the bird cannot survive.  You could help the birds by planting
+                                    tree and plant that provide them a food source and nesting location. You need to create a
+                                    multi-layered habitat of ground covers, small and medium shrubs, and trees that provide food
+                                    and shelter locations all year for a variety of species.
+                                </p>
+                                <p>
+                                    These plant species need to have diverse structures and should be close together to form dense, protective thickets, including climbers within medium-to-tall shrubs and trees, nectar-bearing, and seed-bearing plants. Mulch can also encourage insect life for insectivorous birds. Plants should also be local species that grow naturally in the area and are suited to the climate. Native birds that live in the area will then visit your garden as another food source in their territory.
+                                </p>
                             </div>
-                            {/*<!-- icons -->*/}
-                            <div className="col-xs-12 col-md-4 col-lg-4">
-                                <div className="box">
-                                    <div className="icon">
-                                        <div className="image"><span className="flaticon-sparrow"/></div>
-                                        <h5>High Tech Clinic</h5>
-                                        <p>Suspendisse blandit quam elit, eu imperdiet neque semper lorem ipsum dolores.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-md-4 col-lg-4">
-                                <div className="box">
-                                    <div className="icon">
-                                        <div className="image"><span className="flaticon-dove"/></div>
-                                        <h5>Amazing Support</h5>
-                                        <p>Suspendisse blandit quam elit, eu imperdiet neque semper lorem ipsum dolores.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-md-4 col-lg-4">
-                                <div className="box">
-                                    <div className="icon">
-                                        <div className="image"><span className="flaticon-eagle"/></div>
-                                        <h5>Award Winner</h5>
-                                        <p>Suspendisse blandit quam elit, eu imperdiet neque semper lorem ipsum dolores.</p>
-                                    </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                                {/*<!-- Responsive video -->*/}
+                                <div className="embed-responsive embed-responsive-16by9">
+                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/wHyIzulXYlA"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -77,18 +58,16 @@ const HelpSection = () => (
                     <div id="pane2" className="paneltab tab-pane fade">
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12 res-margin">
-                                <h3>Our Philosophy</h3>
-                                <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.
-                                    Sed in lobortis nisl Phasellus ultrices gravida massa luctus ornare ellen tesque turpis lectus,
-                                    placerat a ultricies a, posuere a nibh fusce mollis imperdiet interdum donec eget metus auguen unc vel
-                                    mauris ultricies, vestibulum orci eget, viverra elit. Aliquam erat volutpat. Phasellus ac sodales felis tiam
-                                    non metus aliquam eros accumsan mollis eget vitae tellusm.
+                                <h3>Planting Trees</h3>
+                                <p>Planting trees are the best approach to attracting birds. All trees and shrubs will provide something of value to birds — nesting sites, insect food, shelter from weather and predators.  There are, without a doubt, birds in your garden now. If you wish to encourage more birds and more varieties of birds around your home, you can do so by providing a variety of trees and shrubs, particularly those that provide food in the form of fruit, berries, nuts or seeds.
+                                    Enticing birds to your garden with desirable fruit and seeds will help greatly in controlling insect populations, as most birds prefer a varied diet. The importance of insect control by birds can hardly be overrated. Robins may take garden-friendly earthworms but also feast on ants, beetles, cankerworms, caterpillars, cutworms, crickets, flies (pupae and adults), slugs, snails, sowbugs, spiders, termites, wireworms, and weevils. Wood warblers are almost 100 per cent insect eaters.
+                                    In bringing birds to your garden, you add a new dimension of interest and will be rewarded by their color, movement, and song. The trees and shrubs will enhance your garden so there is a double benefit.
                                 </p>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 {/*<!-- Responsive video -->*/}
                                 <div className="embed-responsive embed-responsive-16by9">
-                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/deN3nt3Sdhc"></iframe>
+                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/7OR8GYjrX4k"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -97,87 +76,45 @@ const HelpSection = () => (
                     {/*<!-- Panel  3 -->*/}
                     <div id="pane3" className="paneltab tab-pane fade text-center">
                         <div className="row">
-                            <h3>Meet our Team</h3>
-                            {/*<!-- Item 1 -->*/}
-                            <div className="team">
-                                <div className="col-md-3 col-sm-6">
-                                    <div className="img-wrapper">
-                                        <img src="img/team1.jpg" alt="" className="img-responsive"/>
-                                    </div>
-                                    {/*<!-- Caption -->*/}
-                                    <div className="caption-team">
-                                        <h5>Luane Silva </h5>
-                                        <span>Veterinarian</span>
-                                        <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
-                                    </div>
-                                    {/*<!-- Social icons -->*/}
-                                    <div className="social-media margin">
-                                        <a href="#" title=""><i className="fa fa-twitter"/></a>
-                                        <a href="#" title=""><i className="fa fa-facebook"/></a>
-                                        <a href="#" title=""><i className="fa fa-linkedin"/></a>
-                                        <a href="#" title=""><i className="fa fa-pinterest"/></a>
-                                        <a href="#" title=""><i className="fa fa-instagram"/></a>
-                                    </div>
-                                </div>
-                                {/*<!-- Item 2 -->*/}
-                                <div className="col-md-3 col-sm-6">
-                                    <div className="img-wrapper">
-                                        <img src="img/team2.jpg" alt="" className="img-responsive"/>
-                                    </div>
-                                    {/*<!-- Caption -->*/}
-                                    <div className="caption-team">
-                                        <h5>John Suen</h5>
-                                        <span>Caretaker</span>
-                                        <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
-                                    </div>
-                                    {/*<!-- Social icons -->*/}
-                                    <div className="social-media margin">
-                                        <a href="#" title=""><i className="fa fa-twitter"/></a>
-                                        <a href="#" title=""><i className="fa fa-facebook"/></a>
-                                        <a href="#" title=""><i className="fa fa-linkedin"/></a>
-                                        <a href="#" title=""><i className="fa fa-pinterest"/></a>
-                                        <a href="#" title=""><i className="fa fa-instagram"/></a>
-                                    </div>
-                                </div>
-                                {/*<!-- item 3 -->*/}
-                                <div className="col-md-3 col-sm-6">
-                                    <div className="img-wrapper">
-                                        <img src="img/team3.jpg" alt="" className="img-responsive"/>
-                                    </div>
-                                    {/*<!-- Caption -->*/}
-                                    <div className="caption-team">
-                                        <h5>Nancy May</h5>
-                                        <span>Specialist</span>
-                                        <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
-                                    </div>
-                                    {/*<!-- Social icons -->*/}
-                                    <div className="social-media margin">
-                                        <a href="#" title=""><i className="fa fa-twitter"/></a>
-                                        <a href="#" title=""><i className="fa fa-facebook"/></a>
-                                        <a href="#" title=""><i className="fa fa-linkedin"/></a>
-                                        <a href="#" title=""><i className="fa fa-pinterest"/></a>
-                                        <a href="#" title=""><i className="fa fa-instagram"/></a>
-                                    </div>
-                                </div>
-                                {/*<!-- Item 4 -->*/}
-                                <div className="col-md-3 col-sm-6">
-                                    <div className="img-wrapper">
-                                        <img src="img/team4.jpg" alt="" className="img-responsive"/>
-                                    </div>
-                                    {/*<!-- Caption -->*/}
-                                    <div className="caption-team">
-                                        <h5>Amelie Plin</h5>
-                                        <span>Veterinarian</span>
-                                        <p>Pellentesque turpis lectus, placerat a ultricies a, posuere a nibh imperdiet interdum.</p>
-                                    </div>
-                                    {/*<!-- Social icons -->*/}
-                                    <div className="social-media">
-                                        <a href="#" title=""><i className="fa fa-twitter"/></a>
-                                        <a href="#" title=""><i className="fa fa-facebook"/></a>
-                                        <a href="#" title=""><i className="fa fa-linkedin"/></a>
-                                        <a href="#" title=""><i className="fa fa-pinterest"/></a>
-                                        <a href="#" title=""><i className="fa fa-instagram"/></a>
-                                    </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 res-margin">
+                                <h3>Place a bird feeder</h3>
+                                <p>Bird feeders come in a wide range of sizes, styles and designs, but the new
+                                    feeder you choose isn’t always one that will be most attractive to the birds.
+                                    Knowing how to attract birds to a new feeder will help them transition from one
+                                    feeder to another so you can add to your backyard buffet in whatever style you choose.
+                                </p>
+                                <p>
+                                    As any backyard birder knows, a single bird feeder is rarely adequate
+                                    once you get hooked on feeding the birds. Whether you are choosing a larger
+                                    feeder to accommodate more birds, getting different types of feeders for different
+                                    types of seed or just adding more feeders for a growing flock, it is important to choose a
+                                    style that will be attractive to birds. Characteristics to consider include:
+
+                                </p>
+                                <p className="bulletPoints">
+
+                                    <br/>
+                                    •	   Visibility so birds will notice the new feeder and see the seed
+                                    <br/>
+                                    •	   Appropriate feeding ports for seed type and bird species
+                                    <br/>
+                                    •	   Multiple perches or platforms to accommodate many birds
+                                    <br/>
+                                    •	   Feeder capacity and refill frequency expectations
+                                    <br/>
+                                    •	   Pest-resistant features, such as built-in baffles or no-chew construction
+                                </p>
+                                <p>
+                                    Feeders also come in a wide range of decorative styles,
+                                    from natural designs to miniature buildings to artistic abstract shapes.
+                                    Whatever type of feeder you choose, however, it can take time for birds to become
+                                    accustomed to it and feed willingly.
+                                </p>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                                {/*<!-- Responsive video -->*/}
+                                <div className="embed-responsive embed-responsive-16by9">
+                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/jH0425VzERs"></iframe>
                                 </div>
                             </div>
                         </div>

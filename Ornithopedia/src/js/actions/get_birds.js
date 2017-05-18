@@ -34,6 +34,23 @@ export function selectBird(bird){
     }
 }
 
+export function selectBirdForRecordSighting(bird) {
+    if (bird != null)
+        $("#birdName").val(bird.commonName);
+    return dispatch => {
+        dispatch(getSelectedBirdsForRecordSightingFulfilled(bird));
+    }
+}
+
+function getSelectedBirdsForRecordSightingFulfilled (bird){
+    const matchBirdsForRecordSighting = [];
+    return{
+        type : ActionTypes.GetSelectedBirdForRecordSightingFulfilled,
+        selectedBirdForRecordSighting : bird,
+        matchBirdsForRecordSighting
+    }
+}
+
 export function displayMatches(){
     // value of input field
     var wordToMatch = $("search").prevObject[0].activeElement.value;
@@ -41,10 +58,35 @@ export function displayMatches(){
     // value of Birds
     var birds = store.getState().birds.birds;
     const matchBirds = findMatches(wordToMatch, birds);
+    var matchBirdsForRecordSighting = []
+    if(wordToMatch.length != 0) {
+        matchBirdsForRecordSighting = matchBirds;
+    }
     return dispatch => {
         dispatch(filterBirdsByNameAction(matchBirds))
     };
 }
+
+export function displayMatchesForRecordSighting(){
+    // value of input field
+    var wordToMatch = $("search").prevObject[0].activeElement.value;
+
+    if(wordToMatch.length < 3) {
+        wordToMatch = "!@#$%^&*()";
+    }
+
+    // value of Birds
+    var birds = store.getState().birds.birds;
+    const matchBirdsForRecordSighting = findMatches(wordToMatch, birds);
+    return dispatch => {
+        if (matchBirdsForRecordSighting.length == 0){
+            const bird = null;
+            dispatch(selectBirdForRecordSighting(bird));
+        }
+        dispatch(filterBirdsForRecordSightingByNameAction(matchBirdsForRecordSighting))
+    };
+}
+
 
 export function changeBirdsForPage(birdsForPage){
     return{
@@ -83,6 +125,14 @@ function filterBirdsByNameAction(matchBirds){
 
     return {
         type: ActionTypes.filterBirdsByName,
-        matchBirds
+        matchBirds,
+    }
+}
+
+function filterBirdsForRecordSightingByNameAction(matchBirdsForRecordSighting){
+
+    return {
+        type: ActionTypes.filterBirdsForRecordSightingByName,
+        matchBirdsForRecordSighting
     }
 }

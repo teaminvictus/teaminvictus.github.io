@@ -4,6 +4,8 @@
 
 import ActionTypes from '../constants/action_types';
 import database from './database';
+import {getLikelyTrees} from './get_likelyTrees';
+import {getBirdCountFulfilledAction} from './get_birdcount';
 
 export function getSelectedBird(birdId) {
     return dispatch => {
@@ -15,7 +17,8 @@ export function getSelectedBird(birdId) {
                 selectedBird = child.val();
                 birdKey = child.key
             });
-            dispatch(getSelectedBirdFulfilledAction(selectedBird))
+            dispatch(getSelectedBirdFulfilledAction(selectedBird));
+            dispatch(getLikelyTrees(selectedBird));
         })
             .catch((error) => {
                 console.log(error);
@@ -36,9 +39,18 @@ function getSelectedBirdRejectedAction() {
     }
 }
 
-function getSelectedBirdFulfilledAction(selectedBird) {
+export function getSelectedBirdFulfilledAction(selectedBird) {
     return {
         type: ActionTypes.GetSelectedBirdFulfilled,
         selectedBird
     };
+}
+
+export function setUnSelectedBird() {
+    const selectedBird = null;
+    const selectedBirdCount = null;
+    return dispatch => {
+        dispatch(getSelectedBirdFulfilledAction(selectedBird));
+        dispatch(getBirdCountFulfilledAction(selectedBirdCount));
+    }
 }

@@ -40,6 +40,14 @@ export function birdsReducer(state = {}, action) {
             });
             return newState;
         }
+        case ActionTypes.filterBirdsForRecordSightingByName: {
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'Got filtered birds for record sighting.',
+                matchBirdsForRecordSighting : action.matchBirdsForRecordSighting,
+            });
+            return newState;
+        }
         case ActionTypes.changeBirdsForPage: {
             const birdsForPage = action.birdsForPage;
             const newState = Object.assign({}, state, {
@@ -91,7 +99,36 @@ export function birdsReducer(state = {}, action) {
             });
             return newState;
         }
-
+        case ActionTypes.GetLikelyTreesRequested: {
+            return Object.assign({}, state, {
+                inProgress: true,
+                error: '',
+                success: ''
+            });
+        }
+        case ActionTypes.GetLikelyTreesRejected: {
+            return Object.assign({}, state, {
+                inProgress: false,
+                error: 'Error in getting likely Trees for selected bird.',
+            });
+        }
+        case ActionTypes.GetLikelyTreesFulfilled: {
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'likely trees Selected',
+                likelyTrees : action.likelyTrees
+            });
+            return newState;
+        }
+        case ActionTypes.GetSelectedBirdForRecordSightingFulfilled: {
+            const newState = Object.assign({}, state, {
+                inProgress: false,
+                success: 'Birds Selected for Record Sighting',
+                selectedBirdForRecordSighting : action.selectedBirdForRecordSighting,
+                matchBirdsForRecordSighting : action.matchBirdsForRecordSighting
+            });
+            return newState;
+        }
         default:
             return state;
     }

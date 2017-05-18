@@ -9,7 +9,7 @@
     /*overflow: hidden;*/
     /*-webkit-overflow-scrolling: touch;*/
     /*outline: 0;*/
-    color: grey;
+    /*color: grey;*/
 }
 
 .image-modal .modal-content {
@@ -87,7 +87,6 @@
 .birdTitle{
     text-align: center;
 }
-
 
 .trendLegend{
     bottom: 10%;

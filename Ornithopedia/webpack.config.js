@@ -9,7 +9,7 @@ var webpack = require('webpack');
 module.exports = {
     devServer: {
         inline: true,
-        contentBase: './build',
+        contentBase: path.join(__dirname, "build"),
         port: 3000,
         publicPath : '/',
         historyApiFallback:true,
@@ -71,8 +71,7 @@ module.exports = {
         ]
     },
     output: {
-        path: './build',
-
+        path: path.resolve(__dirname, 'build'),
         filename: 'js/bundle.min.js'
     },
     plugins: [

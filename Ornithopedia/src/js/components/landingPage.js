@@ -15,10 +15,9 @@ require("jquery");
 
 
 require("bootstrap-webpack");
-require("bootstrap");
 require("font-awesome-webpack");
-require("../../fonts/font-awesome/css/font-awesome.min.css");
-require("../../fonts/flaticons/flaticon.css");
+// require("../../fonts/font-awesome/css/font-awesome.min.css");
+// require("../../fonts/flaticons/flaticon.css");
 require("../../css/normalize.css");
 require("../../css/preloader.css");
 require("../../css/navigationBar.css");
@@ -32,10 +31,15 @@ require("../../css/birdDetail.css");
 require("../../css/treeFinder.css");
 require("../../css/birdIdentifier.css");
 require("../../css/helpSection.css");
-require("../../fonts/flaticons/flaticon.css");
+// require("../../fonts/flaticons/flaticon.css");
 require("../../css/ourStats.css");
 require("../../css/footer.css");
 require("../../css/btMatrix.css");
+require("../../css/about.css");
+require("../../css/recordShightings.css");
+require("../../css/termsOfUse.css");
+require("../../css/privacyPolicy.css");
+require("materialize-css");
 
 
 class LandingPage extends React.Component {
@@ -64,6 +68,6 @@ class LandingPage extends React.Component {
 }
 
 require("../js/main");
-require("../../vendor/materialize/js/materialize");
+// require("../../vendor/materialize/js/materialize");
 
 export default LandingPage;

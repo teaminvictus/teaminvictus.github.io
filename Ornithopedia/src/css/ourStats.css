@@ -3,7 +3,8 @@
 ============================ */
 
 #stats {
-    /*background: url(../img/png_bg/animals1.png),url(../img/png_bg/animals2.png);*/
+    /*background: url(../images/Birds/birdsBackground1.png),url(../images/Birds/birdsBackground2.png);*/
+    background-color: #d35400;
     background-attachment:fixed;
     background-position: top left, bottom right;
     background-repeat: no-repeat;

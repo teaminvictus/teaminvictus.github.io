@@ -32,11 +32,14 @@ const NavigationBar = () => (
             <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul className="nav navbar-nav page-scroll">
                     <li className="active"><Link to="/">Home</Link></li>
+                    <li><Link to="/matrix">Matrix</Link></li>
                     <li><Link to="/birdIdentifier">Bird Identifier</Link></li>
                     <li><Link to="/birdFinder">Bird Finder</Link></li>
                     <li><Link to="/treeFinder">Tree Finder</Link></li>
+                    <li><Link to="/recordSightings">Record Sightings</Link></li>
+                    <li><Link to="/about">About</Link></li>
                     {/*<li><a href="#gallery">Birds in Backyard</a></li>*/}
-                    <li><Link to="/matrix">Matrix</Link></li>
+
                     {/*<li><Link to="/about">About</Link></li>*/}
                     {/*<li><Link to="/login">Login</Link></li>*/}
                 </ul>

@@ -41,12 +41,6 @@ const OurStats = () => (
                         <hr />
                             <h5>Tree Profiles</h5>
                     </div>
-                    {/*<div className="col-md-3 col-sm-6">*/}
-                        {/*<!-- Number 4 -->*/}
-                        {/*<div className="numscroller" data-slno='1' data-min='0' data-max='50' data-delay='10' data-increment="9">0</div>*/}
-                        {/*<hr />*/}
-                            {/*<h5>Products</h5>*/}
-                    {/*</div>*/}
                 </div>
             </div>
         </div>
